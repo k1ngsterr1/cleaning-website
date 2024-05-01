@@ -1,0 +1,16 @@
+---
+import styles from "./styles.module.scss";
+
+type Props = {
+  buttonType: "filled" | "outline" | "text";
+  text: string;
+  margin?: string;
+  type: string;
+};
+
+const { buttonType, text, margin, type, ...rest } = Astro.props;
+
+const buttonClass = `${styles.button} ${styles[buttonType]} ${margin ? margin : ""}`;
+---
+
+<button class={buttonClass} {...rest}>{text}</button>
