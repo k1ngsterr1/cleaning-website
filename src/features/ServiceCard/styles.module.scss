@@ -1,0 +1,36 @@
+.service_card {
+  width: 90%;
+  height: clamp(150px, 70.092vw, 600px);
+  background: transparent;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s all;
+  @apply rounded-lg;
+  @apply border-gray-400;
+
+  &__heading {
+    @apply text-main_blue;
+    @apply text-2xl;
+    @apply font-gothamBoldReg;
+    @apply mt-4;
+    transition: 0.3s all;
+  }
+
+  &__paragraph {
+    @apply text-dark_blue;
+    @apply font-gothamLightReg;
+    @apply mt-2;
+    transition: 0.3s all;
+  }
+
+  &:hover {
+    @apply bg-main_blue;
+    @apply border-main_blue;
+  }
+
+  &:hover &__heading {
+    @apply text-dark_blue;
+  }
+}

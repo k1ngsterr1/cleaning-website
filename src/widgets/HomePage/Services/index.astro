@@ -1,0 +1,16 @@
+---
+import { ServiceCardList } from "@features/ServiceCardsList";
+import Button from "@shared/ui/Button/index.astro";
+---
+
+<div class="container">
+  <h2 class="mt-8"><span class="text-dark_blue">OUR</span> SERVICES</h2>
+  <p class="paragraph w-[80%] text-center mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris
+  </p>
+  <div class="flex flex-col items-center h-[100vh]">
+    <ServiceCardList client:load />
+  </div>
+</div>

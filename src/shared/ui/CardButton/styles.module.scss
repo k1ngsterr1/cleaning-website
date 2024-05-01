@@ -1,0 +1,16 @@
+.button {
+  width: clamp(16px, 7.47648vw, 64px);
+  height: clamp(16px, 7.47648vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @apply p-2;
+  @apply bg-yellow;
+  @apply text-dark_blue;
+  @apply rounded-full;
+  transition: 0.3s all;
+  &:hover {
+    @apply bg-dark_blue;
+    @apply text-yellow;
+  }
+}

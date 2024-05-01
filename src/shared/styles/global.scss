@@ -32,6 +32,16 @@ h1 {
   @apply text-main_blue;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(15px, 7.0092vw, 60px);
+  @apply font-bold;
+  @apply text-main_blue;
+}
+
 .paragraph {
   @apply text-base;
   @apply text-dark_blue;

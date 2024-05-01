@@ -26,6 +26,8 @@ const { title, description } = Astro.props;
     <meta name="robots" content="index,follow" />
   </head>
   <body class="overflow-x-hidden">
-    <slot />
+    <div class="container">
+      <slot />
+    </div>
   </body>
 </html>
