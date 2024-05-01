@@ -1,10 +1,10 @@
 ---
+import "@shared/styles/global.scss";
+
 interface Props {
   title: string;
   description?: string;
 }
-
-import image from "@assets/logo/fedora.svg";
 
 const { title, description } = Astro.props;
 ---
@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content={title} />
-    <meta property="og:image" content={image.src} />
+    <!-- <meta property="og:image" content={image.src} /> -->
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="Logo" />
     <meta property="og:description" content={description} />

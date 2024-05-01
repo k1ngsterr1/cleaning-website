@@ -1,1 +1,39 @@
 @import "breakpoint-slicer";
+@import "../styles/fonts.scss";
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to("sm") {
+    width: 768px;
+    border: 2px solid red;
+  }
+
+  @include respond-to("md") {
+    width: 992px;
+    border: 2px solid yellow;
+  }
+
+  @include respond-to("lg") {
+    width: 1200px;
+    border: 2px solid orange;
+  }
+}
+
+h1 {
+  font-size: clamp(20px, 9.3456vw, 80px);
+  @apply font-bold;
+  @apply text-main_blue;
+}
+
+.paragraph {
+  @apply text-base;
+  @apply text-dark_blue;
+  @apply font-gothamLightReg;
+}

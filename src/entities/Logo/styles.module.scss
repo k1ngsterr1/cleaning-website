@@ -1,2 +1,10 @@
 .logo {
+  transition: 0.3s all;
+  @apply text-xl;
+  @apply font-gothamBoldReg;
+
+  @apply text-main_blue;
+  &:hover {
+    @apply text-yellow;
+  }
 }

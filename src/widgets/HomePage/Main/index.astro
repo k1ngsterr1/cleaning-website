@@ -1,0 +1,21 @@
+---
+import { Header } from "@features/Header";
+import Button from "@shared/ui/Button/index.astro";
+
+import cleaning_image from "@assets/images/cleaning_main.webp";
+---
+
+<main class="container">
+  <Header client:load />
+  <h1 class="text-center mt-16">
+    MEERY'S CLEANING SERVICES: MAKING DES PLAINES HOMES SHINE
+  </h1>
+  <p class="paragraph text-center w-[80%] m-auto mt-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris
+  </p>
+  <Button buttonType="filled" text="Contact Us" margin="mt-4" />
+  <Button buttonType="text" text="Explore More" margin="mt-2" />
+  <img class="w-full" src={cleaning_image.src} alt="Cleaning Image" />
+</main>

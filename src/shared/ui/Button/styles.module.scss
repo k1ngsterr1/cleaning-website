@@ -1,0 +1,36 @@
+.button {
+  width: clamp(130px, 60.746399999999994vw, 520px);
+  height: clamp(27.5px, 12.8502vw, 110px);
+  transition: 0.3s all;
+}
+
+.filled {
+  @extend .button;
+  @apply bg-yellow;
+  @apply text-dark_blue;
+  &:hover {
+    @apply bg-main_blue;
+  }
+}
+
+.outline {
+  @extend .button;
+  background: transparent;
+  border: 2px solid;
+  @apply text-dark_blue;
+  @apply border-dark_blue;
+  &:hover {
+    @apply text-main_blue;
+    @apply border-main_blue;
+  }
+}
+
+.text {
+  @extend .button;
+  background: transparent;
+  @apply text-main_blue;
+  @apply underline;
+  &:hover {
+    @apply text-dark_blue;
+  }
+}

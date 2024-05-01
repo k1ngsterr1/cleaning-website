@@ -9,6 +9,13 @@ export default {
         yellow: "#FFD641",
       },
     },
+    fontFamily: {
+      gothamBlackReg: ["GothamProBlack"],
+      gothamBoldReg: ["GothamProBold"],
+      gothamMediumReg: ["GothamProMedium"],
+      gothamProReg: ["GothamProRegular"],
+      gothamLightReg: ["GothamProLight"],
+    },
   },
   plugins: [],
 };
