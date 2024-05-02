@@ -45,8 +45,12 @@ export const Swiper: React.FC<ISwiperProps> = ({ children, slidesPerView }) => {
           </div>
         ))}
       </div>
-      <SwiperButton onClick={goToPrevious} icon={faChevronLeft} />
-      <SwiperButton onClick={goToNext} icon={faChevronRight} />
+      <SwiperButton
+        onClick={goToPrevious}
+        isNext={false}
+        icon={faChevronLeft}
+      />
+      <SwiperButton onClick={goToNext} isNext={true} icon={faChevronRight} />
     </div>
   );
 };

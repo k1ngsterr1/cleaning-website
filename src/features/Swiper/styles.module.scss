@@ -1,32 +1,43 @@
+/* Ensuring the swiper container has a fixed height to display correctly */
 .swiper_container {
   position: relative;
   overflow: hidden;
+  width: 100%; /* Full width of the parent container */
+  height: auto; /* Adjust based on your content or set a fixed height */
 }
 
+/* The wrapper will hold all slides and should be wide enough to hold all slides side by side */
 .swiper_wrapper {
   display: flex;
   transition: 0.3s ease-in-out;
-  width: 100%;
-  border: 2px solid yellow;
+  width: 100%; /* This should actually be the combined width of all slides, but initially, set to 100% */
 }
 
+/* Each slide should be set to take up the full width of the swiper container to display one slide at a time */
 .swiper_slide {
   width: 100%;
-  padding: 20px; /* Add padding to prevent the card from touching the edges */
-  box-sizing: border-box; /* Ensures padding doesn't increase the size of the slide */
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
 }
 
+/* Navigation buttons styling */
 .swiper_button_prev,
 .swiper_button_next {
+  width: clamp(24px, 11.21472vw, 96px);
+  height: clamp(24px, 11.21472vw, 96px);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 100;
+  @apply p-2;
+  @apply text-dark_blue;
+  @apply rounded-full;
+  @apply bg-yellow;
+  @apply shadow-md;
 }
 
 .swiper_button_prev {

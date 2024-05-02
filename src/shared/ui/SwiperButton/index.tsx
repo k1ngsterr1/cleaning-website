@@ -2,16 +2,24 @@ import React from "react";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "./styles.module.scss";
+import styles from "@features/Swiper/styles.module.scss";
 
 interface ISwiperButton {
   icon: IconDefinition;
   onClick: () => void;
+  isNext: boolean;
 }
 
-export const SwiperButton: React.FC<ISwiperButton> = ({ icon, onClick }) => {
+export const SwiperButton: React.FC<ISwiperButton> = ({
+  icon,
+  onClick,
+  isNext,
+}) => {
   return (
-    <button className={styles.swiper_button}>
+    <button
+      onClick={onClick}
+      className={isNext ? styles.swiper_button_next : styles.swiper_button_prev}
+    >
       <FontAwesomeIcon icon={icon} />
     </button>
   );

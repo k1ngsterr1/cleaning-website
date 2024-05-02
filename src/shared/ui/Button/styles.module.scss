@@ -25,6 +25,18 @@
   }
 }
 
+.outline-yellow {
+  @extend .button;
+  background: transparent;
+  border: 2px solid;
+  @apply text-yellow;
+  @apply border-yellow;
+  &:hover {
+    @apply text-dark_blue;
+    @apply border-dark_blue;
+  }
+}
+
 .text {
   @extend .button;
   background: transparent;
