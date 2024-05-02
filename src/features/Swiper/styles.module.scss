@@ -1,0 +1,32 @@
+.swiper_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper_wrapper {
+  display: flex;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+.swiper_slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.swiper_button_prev,
+.swiper_button_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.swiper_button_prev {
+  left: 10px;
+}
+
+.swiper_button_next {
+  right: 10px;
+}

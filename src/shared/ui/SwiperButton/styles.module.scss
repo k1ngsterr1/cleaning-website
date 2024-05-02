@@ -1,0 +1,8 @@
+.swiper_button {
+  width: clamp(24px, 11.21472vw, 96px);
+  height: clamp(24px, 11.21472vw, 96px);
+  @apply p-2;
+  @apply text-dark_blue;
+  @apply rounded-full;
+  @apply bg-yellow;
+}

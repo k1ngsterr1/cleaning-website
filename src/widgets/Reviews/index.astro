@@ -1,15 +1,15 @@
 ---
 import { ServiceCardList } from "@features/ServiceCardsList";
+import { Swiper } from "@features/Swiper";
+import { ReviewSwiper } from "@features/ReviewSwiper";
 ---
 
-<section class="container">
-  <h2 class="mt-8"><span class="text-dark_blue">OUR</span> SERVICES</h2>
-  <p class="paragraph w-[80%] text-center mt-4">
+<section class="container bg-main_blue mt-16">
+  <h2 class="mt-8 text-white">REVIEWS</h2>
+  <p class="paragraph w-[80%] text-center mt-4 !text-white">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris
   </p>
-  <div class="flex flex-col items-center justify-center gap-8 mt-8">
-    <ServiceCardList client:load />
-  </div>
+  <ReviewSwiper client:load />
 </section>
