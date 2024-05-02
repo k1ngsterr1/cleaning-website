@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @apply bg-main_blue;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @apply gap-2;
+    @apply mt-4;
+
+    &__link {
+      transition: 0.3s all;
+      @apply text-lg;
+      @apply text-dark_blue;
+
+      &:hover {
+        @apply text-yellow;
+      }
+    }
+  }
+
+  &__link {
+    @apply font-gothamProReg;
+    @apply text-dark_blue;
+    @apply text-lg;
+    @apply mt-4;
+    @apply mb-4;
+  }
+}

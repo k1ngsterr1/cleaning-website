@@ -1,8 +1,9 @@
 ---
 import { Header } from "@features/Header";
 import Button from "@shared/ui/Button/index.astro";
+import cleaning_image from "@assets/images/main.webp";
 
-import cleaning_image from "@assets/images/cleaning_main.webp";
+import styles from "../Main/styles.module.scss";
 ---
 
 <main class="flex flex-col items-center justify-center">
@@ -17,5 +18,5 @@ import cleaning_image from "@assets/images/cleaning_main.webp";
   </p>
   <Button buttonType="filled" text="Contact Us" margin="mt-4" />
   <Button buttonType="text" text="Explore More" margin="mt-2" />
-  <img class="w-full" src={cleaning_image.src} alt="Cleaning Image" />
+  <img class={styles.image} src={cleaning_image.src} alt="Cleaning Image" />
 </main>

@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   textAlign = "left",
   ...rest
 }) => {
-  const inputClass = `${styles.input} ${margin ? styles[margin] : ""}`;
+  const inputClass = `${styles.input} ${margin ? margin : ""}`;
   const inputStyle = { textAlign };
 
   return (

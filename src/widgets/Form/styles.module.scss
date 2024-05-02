@@ -1,6 +1,21 @@
+.form_container {
+  @apply mt-16;
+}
+
 .form {
   display: flex;
   align-items: center;
-
   flex-direction: column;
+}
+
+.link {
+  @apply font-gothamProReg;
+  @apply text-main_blue;
+  @apply mt-8;
+}
+
+.image {
+  width: 100%;
+  height: clamp(150px, 70.092vw, 600px);
+  @apply mt-8;
 }

@@ -1,0 +1,34 @@
+.selector {
+  width: clamp(120px, 56.0736vw, 480px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid;
+  transition: 0.3s all;
+  @apply text-lg;
+  @apply pl-2;
+  @apply pb-2;
+  @apply pr-2;
+  @apply text-dark_blue;
+  @apply border-main_blue;
+
+  &__placeholder {
+    @apply text-dark_blue;
+  }
+
+  &__list {
+    width: clamp(120px, 56.0736vw, 480px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @apply bg-gray-200;
+    @apply shadow-md;
+
+    &__item {
+      @apply pt-3;
+      @apply pb-3;
+      @apply text-dark_blue;
+    }
+  }
+}

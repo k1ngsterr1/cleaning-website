@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "./styles.module.scss";
 
 interface SelectorProps {
@@ -27,9 +28,9 @@ const Selector: React.FC<SelectorProps> = ({
   };
 
   return (
-    <div className={`w-full flex flex-col items-center margin`}>
+    <div className={`w-full flex flex-col items-center ${margin}`}>
       <div className={styles.selector} onClick={toggleDropdown}>
-        <span className={styles.selectorPlaceholder}>
+        <span className={styles.selector__placeholder}>
           {value || placeholder}
         </span>
         <FontAwesomeIcon
@@ -38,12 +39,12 @@ const Selector: React.FC<SelectorProps> = ({
         />
       </div>
       {isOpen && (
-        <ul className={styles.list}>
+        <ul className={styles.selector__list}>
           {options.map((option) => (
             <li
               key={option.value}
               onClick={() => handleOptionClick(option.value)}
-              className={styles.listItem}
+              className={styles.selector__list__item}
             >
               {option.label}
             </li>

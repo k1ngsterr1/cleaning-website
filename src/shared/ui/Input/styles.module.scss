@@ -1,12 +1,19 @@
 .input {
+  width: clamp(120px, 56.0736vw, 480px);
   background: transparent;
   border-bottom: 2px solid;
   transition: 0.3s all;
-  @apply text-base;
+  @apply text-lg;
+  @apply pl-2;
+  @apply pb-2;
   @apply text-dark_blue;
-  @apply border-dark_blue;
+  @apply border-main_blue;
   &:hover {
-    @apply text-yellow;
+    @apply text-main_blue;
     @apply border-yellow;
   }
+}
+
+input::placeholder {
+  @apply text-dark_blue;
 }

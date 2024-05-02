@@ -4,6 +4,8 @@ import Main from "@widgets/HomePage/Main/index.astro";
 import Services from "@widgets/HomePage/Services/index.astro";
 import Reviews from "@widgets/HomePage/Reviews/index.astro";
 import Book from "@widgets/HomePage/Book/index.astro";
+import { Footer } from "@features/Footer";
+import { Form } from "@widgets/Form/index";
 ---
 
 <Layout title="Zaka Cleaning">
@@ -11,4 +13,6 @@ import Book from "@widgets/HomePage/Book/index.astro";
   <Services />
   <Reviews />
   <Book />
+  <Form client:load />
+  <Footer client:load />
 </Layout>
