@@ -2,11 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Main from "@widgets/HomePage/Main/index.astro";
 import Services from "@widgets/HomePage/Services/index.astro";
-import Reviews from "@widgets/Reviews/index.astro";
+import Reviews from "@widgets/HomePage/Reviews/index.astro";
+import Book from "@widgets/HomePage/Book/index.astro";
 ---
 
 <Layout title="Zaka Cleaning">
   <Main />
-  <Services client:load />
-  <Reviews client:load />
+  <Services />
+  <Reviews />
+  <Book />
 </Layout>
