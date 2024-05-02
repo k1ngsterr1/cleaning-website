@@ -1,6 +1,6 @@
 .service_card {
-  width: 90%;
-  height: clamp(150px, 70.092vw, 600px);
+  width: 85%;
+  min-height: clamp(150px, 70.092vw, 600px);
   background: transparent;
   border: 2px solid;
   display: flex;
@@ -8,7 +8,16 @@
   align-items: flex-start;
   transition: 0.3s all;
   @apply rounded-lg;
+  @apply pl-4;
+  @apply pt-4;
+  @apply pr-2;
+  @apply pb-4;
   @apply border-gray-400;
+
+  &__icon {
+    @apply text-4xl;
+    @apply text-main_blue;
+  }
 
   &__heading {
     @apply text-main_blue;
@@ -32,5 +41,9 @@
 
   &:hover &__heading {
     @apply text-dark_blue;
+  }
+
+  &:hover &__icon {
+    @apply text-yellow;
   }
 }
