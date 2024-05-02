@@ -1,0 +1,12 @@
+.input {
+  background: transparent;
+  border-bottom: 2px solid;
+  transition: 0.3s all;
+  @apply text-base;
+  @apply text-dark_blue;
+  @apply border-dark_blue;
+  &:hover {
+    @apply text-yellow;
+    @apply border-yellow;
+  }
+}
