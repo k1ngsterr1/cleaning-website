@@ -13,10 +13,8 @@ export const useSwiper = ({ totalSlides, slidesPerView }: UseSwiperArgs) => {
   const goToNext = () => {
     setCurrentIndex((prevIndex) => {
       let nextIndex = prevIndex + 1;
-      // Ensure not to scroll past the last accessible slide
-      if (nextIndex > totalSlides - slidesPerView) {
-        nextIndex = totalSlides - slidesPerView;
-      }
+      if (nextIndex >= totalSlides) nextIndex = totalSlides - 1;
+      console.log("Next Index: ", nextIndex);
       return nextIndex;
     });
   };
@@ -25,10 +23,8 @@ export const useSwiper = ({ totalSlides, slidesPerView }: UseSwiperArgs) => {
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => {
       let prevIndexAdjusted = prevIndex - 1;
-      // Ensure not to scroll before the first slide
-      if (prevIndexAdjusted < 0) {
-        prevIndexAdjusted = 0;
-      }
+      if (prevIndexAdjusted < 0) prevIndexAdjusted = 0;
+      console.log("Previous Index: ", prevIndexAdjusted);
       return prevIndexAdjusted;
     });
   };

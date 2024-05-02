@@ -7,10 +7,16 @@
   display: flex;
   transition: 0.3s ease-in-out;
   width: 100%;
+  border: 2px solid yellow;
 }
 
 .swiper_slide {
   width: 100%;
+  padding: 20px; /* Add padding to prevent the card from touching the edges */
+  box-sizing: border-box; /* Ensures padding doesn't increase the size of the slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
 }
 
