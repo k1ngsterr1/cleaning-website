@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServicesScreen from "@widgets/HomePage/Services/index.astro";
+import Book from "@widgets/HomePage/Book/index.astro";
+import {Form} from '@widgets/Form/index'
+import { Header } from "@features/Header";
+import { Footer } from "@features/Footer";
+
+---
+<Layout title="Zaka Cleaning Services">
+    <Header client:load/>
+    <ServicesScreen/>
+    <Book/>
+    <Form client:load/>
+    <Footer client:load/>
+</Layout>
+
+

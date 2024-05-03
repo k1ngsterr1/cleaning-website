@@ -6,10 +6,15 @@ import Reviews from "@widgets/HomePage/Reviews/index.astro";
 import Book from "@widgets/HomePage/Book/index.astro";
 import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
+
+import cleaning_image from "@assets/images/main.webp";
+
 ---
 
 <Layout title="Zaka Cleaning">
-  <Main />
+  <Main title="MEERY'S CLEANING SERVICES: MAKING DES PLAINES HOMES SHINE" 
+    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" 
+    image={cleaning_image} />
   <Services />
   <Reviews />
   <Book />
