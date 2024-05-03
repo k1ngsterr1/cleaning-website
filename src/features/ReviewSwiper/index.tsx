@@ -29,6 +29,18 @@ export const ReviewSwiper = () => {
         position="BikersCoffee Owner"
         stars={5}
       />
+      <ReviewCard
+        text="Lorem ipsum dolor sit amet, conse ctetur adi piscing elit, sed do eiusmod tempor incid idunt ut enem os.."
+        name="Phoebe Belle"
+        position="BikersCoffee Owner"
+        stars={5}
+      />
+      <ReviewCard
+        text="Lorem ipsum dolor sit amet, conse ctetur adi piscing elit, sed do eiusmod tempor incid idunt ut enem os.."
+        name="Phoebe Belle"
+        position="BikersCoffee Owner"
+        stars={5}
+      />
     </Swiper>
   );
 };
