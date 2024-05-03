@@ -1,11 +1,19 @@
 ---
-import  AccordionTab  from "@entities/AccordionItem";
+import Layout from "src/layouts/Layout.astro";
+import Main from '@widgets/HomePage/Main/index.astro'
+import Book from '@widgets/HomePage/Book/index.astro'
+import {Form} from '@widgets/Form/index'
+import {Footer} from "@features/Footer/index"
+
+import faq_image from '@assets/images/faq_photo.webp'
 ---
-<section>
-    
-    <AccordionTab client:only/>
-</section>
 
-<style>
+<Layout title="Zaka Cleaning FAQ">
+    <Main title="FREQUENTLY ASKED QUESTIONS"  paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"  image={faq_image}
+ />
+ <Book/>
+    <Form client:load/>
+    <Footer client:load/>
+</Layout>
 
-</style>
+
