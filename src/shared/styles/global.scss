@@ -50,6 +50,7 @@ body {
 h1 {
   width: 95%;
   font-size: clamp(20px, 9.3456vw, 80px);
+  text-align: center;
   @apply font-gothamBlackReg;
   @apply text-main_blue;
 }
@@ -59,13 +60,17 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-gothamBoldReg;
+  text-align: center;
   font-size: clamp(15px, 7.0092vw, 60px);
+  @apply font-gothamBoldReg;
   @apply font-bold;
   @apply text-main_blue;
 }
 
 .paragraph {
+  width: 90%;
+  text-align: center;
+  font-size: clamp(15px, 7.0092vw, 60px);
   @apply text-base;
   @apply text-dark_blue;
   @apply font-gothamLightReg;
