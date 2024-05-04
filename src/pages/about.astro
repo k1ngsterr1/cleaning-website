@@ -1,25 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Main from "@widgets/HomePage/Main/index.astro";
-import AboutScreen from '@widgets/AboutPage/About/index.astro'
-import CounterScreen from '@widgets/AboutPage/CounterScreens/index.astro'
-import Book from "@widgets/HomePage/Book/index.astro"
+import AboutScreen from "@widgets/AboutPage/About/index.astro";
+import CounterScreen from "@widgets/AboutPage/CounterScreens/index.astro";
+import Book from "@widgets/HomePage/Book/index.astro";
 import { Form } from "@widgets/Form";
 import { Footer } from "@features/Footer";
 
-import about_image from '@assets/images/cleaning_about.webp'
-
+import about_image from "@assets/images/cleaning_about.webp";
 ---
+
 <Layout title="Zaka Cleaning About">
-    <Main title="THERE ARE MORE INFORMATION ABOUT US"     paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" 
+  <Main
+    title="THERE ARE MORE INFORMATION ABOUT US"
+    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     image={about_image}
-/>
-    <AboutScreen/>
-    <CounterScreen/>
-    <Book/>
-    <Form client:load/>
-    <Footer client:load />
+  />
+  <AboutScreen />
+  <CounterScreen />
+  <Book />
+  <Form client:load />
+  <Footer client:load />
 </Layout>
-
-
-</style>

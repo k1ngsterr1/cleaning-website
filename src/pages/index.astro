@@ -10,6 +10,7 @@ import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
 
 import cleaning_image from "@assets/images/main.webp";
+import About from "@widgets/AboutPage/About/index.astro";
 ---
 
 <Layout title="Zaka Cleaning">
@@ -18,12 +19,12 @@ import cleaning_image from "@assets/images/main.webp";
     paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     image={cleaning_image}
   />
+  <About />
   <Features />
-  <Activities>
-    <Services />
-    <Reviews />
-    <Book />
-    <Form client:load />
-    <Footer client:load />
-  </Activities>
+  <Activities />
+  <Services />
+  <Reviews />
+  <Book />
+  <Form client:load />
+  <Footer client:load />
 </Layout>

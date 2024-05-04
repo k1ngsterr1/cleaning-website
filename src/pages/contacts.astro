@@ -1,10 +1,12 @@
 ---
-
+import Layout from "src/layouts/Layout.astro";
+import { Header } from "@features/Header";
+import { Form } from "@widgets/Form";
+import { Footer } from "@features/Footer";
 ---
-<>
 
-</div>
-
-<style>
-
-</style>
+<Layout title="Zaka Cleaning Contacts">
+  <Header client:load />
+  <Form client:load />
+  <Footer client:load />
+</Layout>

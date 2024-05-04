@@ -1,7 +1,18 @@
 @import "breakpoint-slicer";
+
 @import "../styles/fonts.scss";
 @import "../styles/mixins.scss";
 @import "../styles/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply font-gothamProReg;
+}
 
 .container {
   width: 100%;
@@ -37,8 +48,9 @@
 }
 
 h1 {
+  width: 95%;
   font-size: clamp(20px, 9.3456vw, 80px);
-  @apply font-bold;
+  @apply font-gothamBlackReg;
   @apply text-main_blue;
 }
 
@@ -47,6 +59,7 @@ h3,
 h4,
 h5,
 h6 {
+  @apply font-gothamBoldReg;
   font-size: clamp(15px, 7.0092vw, 60px);
   @apply font-bold;
   @apply text-main_blue;
