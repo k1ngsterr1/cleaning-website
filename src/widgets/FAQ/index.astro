@@ -1,0 +1,16 @@
+---
+import { AccordionTab } from "@entities/AccordionItem";
+import { faqContent } from "@shared/lib/faqContent";
+---
+
+<section class="w-[90%] m-auto">
+  {
+    faqContent.map((faq) => (
+      <AccordionTab
+        heading={faq.heading}
+        paragraph={faq.paragraph}
+        client:load
+      />
+    ))
+  }
+</section>

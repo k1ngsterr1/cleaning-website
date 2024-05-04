@@ -10,18 +10,28 @@
   align-items: center;
   justify-content: center;
 
+  @include respond-to("xxs") {
+    width: 100%;
+    margin: auto;
+  }
+
+  @include respond-to("xs") {
+    max-width: 420px;
+    border: 2px solid blue;
+  }
+
   @include respond-to("sm") {
-    width: 768px;
+    max-width: 768px;
     border: 2px solid red;
   }
 
   @include respond-to("md") {
-    width: 992px;
+    max-width: 992px;
     border: 2px solid yellow;
   }
 
   @include respond-to("lg") {
-    width: 1200px;
+    max-width: 1200px;
     border: 2px solid orange;
   }
 }

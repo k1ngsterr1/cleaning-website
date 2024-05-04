@@ -1,19 +1,22 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import Main from '@widgets/HomePage/Main/index.astro'
-import Book from '@widgets/HomePage/Book/index.astro'
-import {Form} from '@widgets/Form/index'
-import {Footer} from "@features/Footer/index"
+import Main from "@widgets/HomePage/Main/index.astro";
+import Book from "@widgets/HomePage/Book/index.astro";
+import FAQ from "@widgets/FAQ/index.astro";
+import { Form } from "@widgets/Form/index";
+import { Footer } from "@features/Footer/index";
 
-import faq_image from '@assets/images/faq_photo.webp'
+import faq_image from "@assets/images/faq_photo.webp";
 ---
 
 <Layout title="Zaka Cleaning FAQ">
-    <Main title="FREQUENTLY ASKED QUESTIONS"  paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"  image={faq_image}
- />
- <Book/>
-    <Form client:load/>
-    <Footer client:load/>
+  <Main
+    title="FREQUENTLY ASKED QUESTIONS"
+    paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+    image={faq_image}
+  />
+  <FAQ />
+  <Book />
+  <Form client:load />
+  <Footer client:load />
 </Layout>
-
-
