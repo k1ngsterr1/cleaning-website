@@ -5,6 +5,7 @@ import Services from "@widgets/HomePage/Services/index.astro";
 import Reviews from "@widgets/HomePage/Reviews/index.astro";
 import Book from "@widgets/HomePage/Book/index.astro";
 import Features from "@widgets/HomePage/Features/index.astro";
+import Activities from "@widgets/HomePage/Activities/index.astro";
 import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
 
@@ -18,9 +19,11 @@ import cleaning_image from "@assets/images/main.webp";
     image={cleaning_image}
   />
   <Features />
-  <Services />
-  <Reviews />
-  <Book />
-  <Form client:load />
-  <Footer client:load />
+  <Activities>
+    <Services />
+    <Reviews />
+    <Book />
+    <Form client:load />
+    <Footer client:load />
+  </Activities>
 </Layout>

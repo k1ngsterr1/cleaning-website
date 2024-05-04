@@ -1,6 +1,6 @@
 .activity_card {
   width: 85%;
-  min-height: clamp(150px, 70.092vw, 600px);
+  min-height: 150px;
   background: transparent;
   border: 2px solid;
   display: flex;
@@ -21,8 +21,9 @@
 
   &__paragraph {
     @apply text-dark_blue;
-    @apply font-gothamLightReg;
-    @apply mt-2;
+    @apply text-xl;
+    @apply font-gothamBoldReg;
+    @apply mt-4;
     transition: 0.3s all;
   }
 
