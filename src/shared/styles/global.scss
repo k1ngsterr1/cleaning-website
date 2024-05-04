@@ -22,28 +22,18 @@ body {
   justify-content: center;
 
   @include respond-to("xxs") {
-    width: 100%;
-    margin: auto;
   }
 
   @include respond-to("xs") {
-    max-width: 420px;
-    border: 2px solid blue;
   }
 
   @include respond-to("sm") {
-    max-width: 768px;
-    border: 2px solid red;
   }
 
   @include respond-to("md") {
-    max-width: 992px;
-    border: 2px solid yellow;
   }
 
   @include respond-to("lg") {
-    max-width: 1200px;
-    border: 2px solid orange;
   }
 }
 
@@ -53,6 +43,26 @@ h1 {
   text-align: center;
   @apply font-gothamBlackReg;
   @apply text-main_blue;
+
+  @include respond-to("xxs") {
+    font-size: clamp(20px, 11.11111111111111vw, 80px);
+  }
+
+  @include respond-to("xs") {
+    font-size: clamp(20px, 9.523809523809524vw, 80px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(20px, 5.208333333333333vw, 80px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(20px, 4.032258064516129vw, 80px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(32.5px, 3.3852vw, 130px);
+  }
 }
 
 h2,
