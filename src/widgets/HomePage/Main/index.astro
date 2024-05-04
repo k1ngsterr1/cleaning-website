@@ -4,16 +4,13 @@ import Button from "@shared/ui/Button/index.astro";
 
 import styles from "../Main/styles.module.scss";
 
-
-interface Props{
-    title: string;
-    image: ImageMetadata;
-    paragraph: string
+interface Props {
+  title: string;
+  image: ImageMetadata;
+  paragraph: string;
 }
 
 const { title, paragraph, image } = Astro.props;
-
-
 ---
 
 <main class="flex flex-col items-center justify-center">
