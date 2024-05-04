@@ -1,14 +1,14 @@
-import { cardsContent } from "@shared/lib/servicesCardsContent";
 import { ServiceCard } from "@entities/ServiceCard";
+import { featuresContent } from "@shared/lib/featureContent";
 
-export const ServiceCardList = () => {
+export const FeatureCardList = () => {
   return (
     <>
-      {cardsContent.map((card, index) => (
+      {featuresContent.map((card, index) => (
         <ServiceCard
           key={index}
           icon={card.icon}
-          heading={card.title}
+          heading={card.heading}
           paragraph={card.description}
         />
       ))}
