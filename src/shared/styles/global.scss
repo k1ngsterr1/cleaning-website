@@ -22,9 +22,11 @@ body {
   justify-content: center;
 
   @include respond-to("xxs") {
+    // width: 90%;
   }
 
   @include respond-to("xs") {
+    // width: 90%;
   }
 
   @include respond-to("sm") {
@@ -72,6 +74,11 @@ h5,
 h6 {
   text-align: center;
   font-size: clamp(15px, 7.0092vw, 60px);
+
+  @include respond-to("xxs") {
+    font-size: clamp(14px, 7.778vw, 56px);
+  }
+
   @apply font-gothamBoldReg;
   @apply font-bold;
   @apply text-main_blue;
@@ -81,6 +88,9 @@ h6 {
   width: 90%;
   text-align: center;
   font-size: clamp(15px, 7.0092vw, 60px);
+  @include respond-to("xxs") {
+    font-size: clamp(7px, 3.889vw, 28px);
+  }
   @apply text-base;
   @apply text-dark_blue;
   @apply font-gothamLightReg;

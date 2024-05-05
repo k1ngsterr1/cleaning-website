@@ -27,7 +27,7 @@ export const ReviewCard: React.FC<IReviewCardProps> = ({
           <StarsRating rating={5} />
         </div>
       </div>
-      <p className="paragraph mt-4 ml-7">{text}</p>
+      <p className="paragraph mt-4 ml-7 !text-left">{text}</p>
     </div>
   );
 };
