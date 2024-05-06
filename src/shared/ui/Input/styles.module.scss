@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 .input {
   width: clamp(120px, 56.0736vw, 480px);
   background: transparent;
@@ -8,6 +12,11 @@
   @apply pb-2;
   @apply text-dark_blue;
   @apply border-main_blue;
+
+  @include respond-to("xxs") {
+    font-size: clamp(7px, 3.889vw, 28px);
+  }
+
   &:hover {
     @apply text-main_blue;
     @apply border-yellow;

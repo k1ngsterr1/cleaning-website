@@ -1,3 +1,7 @@
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
+@import "breakpoint-slicer";
+
 .service_card {
   width: 85%;
   min-height: clamp(150px, 70.092vw, 600px);
@@ -15,6 +19,10 @@
   @apply border-gray-400;
 
   &__icon {
+    @include respond-to("xxs") {
+      font-size: clamp(17.5px, 9.722vw, 70px);
+    }
+
     @apply text-4xl;
     @apply text-main_blue;
   }
@@ -25,6 +33,17 @@
     @apply font-gothamBoldReg;
     @apply mt-4;
     transition: 0.3s all;
+  }
+
+  @include respond-to("xxs") {
+    &__paragraph {
+      width: 80%;
+      font-size: clamp(6.5px, 3.611vw, 26px);
+      @apply text-dark_blue;
+      @apply font-gothamLightReg;
+      @apply mt-2;
+      transition: 0.3s all;
+    }
   }
 
   &__price {
