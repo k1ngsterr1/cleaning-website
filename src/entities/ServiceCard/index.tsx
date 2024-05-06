@@ -10,6 +10,7 @@ interface IServiceCardProps {
   heading: string;
   price: string;
   paragraph: string;
+  onClick: () => void;
 }
 
 export const ServiceCard: React.FC<IServiceCardProps> = ({
@@ -17,6 +18,7 @@ export const ServiceCard: React.FC<IServiceCardProps> = ({
   heading,
   price,
   paragraph,
+  onClick,
 }) => {
   return (
     <div className={styles.service_card}>
@@ -24,7 +26,7 @@ export const ServiceCard: React.FC<IServiceCardProps> = ({
       <span className={styles.service_card__heading}>{heading}</span>
       <span className={styles.service_card__price}>{price}</span>
       <p className={styles.service_card__paragraph}>{paragraph}</p>
-      <CardButton />
+      <CardButton onClick={onClick} />
     </div>
   );
 };

@@ -1,0 +1,39 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+  width: 90%;
+  min-height: clamp(150px, 70.092vw, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  @apply p-8;
+  @apply rounded-md;
+  @apply border-main_blue;
+  @apply bg-white;
+  @apply shadow-lg;
+
+  &__heading {
+    @apply text-2xl;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

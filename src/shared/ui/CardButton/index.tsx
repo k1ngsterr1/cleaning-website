@@ -5,9 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./styles.module.scss";
 
-export const CardButton = () => {
+interface ICardButtonProps {
+  onClick: () => void;
+}
+
+export const CardButton: React.FC<ICardButtonProps> = ({ onClick }) => {
   return (
-    <button className={styles.button}>
+    <button className={styles.button} onClick={onClick}>
       <FontAwesomeIcon icon={faChevronRight} />
     </button>
   );
