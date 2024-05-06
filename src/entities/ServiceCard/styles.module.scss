@@ -27,6 +27,15 @@
     transition: 0.3s all;
   }
 
+  &__price {
+    @apply text-main_blue;
+    @apply text-xl;
+    @apply font-gothamBoldReg;
+    @apply mt-2;
+    @apply mb-2;
+    transition: 0.3s all;
+  }
+
   &__paragraph {
     @apply text-dark_blue;
     @apply font-gothamLightReg;
@@ -40,6 +49,10 @@
   }
 
   &:hover &__heading {
+    @apply text-dark_blue;
+  }
+
+  &:hover &__price {
     @apply text-dark_blue;
   }
 

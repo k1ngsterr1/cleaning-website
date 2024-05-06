@@ -9,6 +9,7 @@ export const ServiceCardList = () => {
           key={index}
           icon={card.icon}
           heading={card.title}
+          price={card.price}
           paragraph={card.description}
         />
       ))}
