@@ -3,7 +3,7 @@ import { ServiceCardList } from "@features/ServiceCardsList";
 import Button from "@shared/ui/Button/index.astro";
 ---
 
-<section class="mb-16 mt-16 flex flex-col items-center">
+<main class="mb-16 mt-16 flex flex-col items-center" id="main">
   <h4 class="text-center">
     <span class="text-dark_blue">OUR</span> SERVICES
   </h4>
@@ -16,4 +16,4 @@ import Button from "@shared/ui/Button/index.astro";
     <ServiceCardList client:load />
   </div>
   <Button text="Book A Cleaning" buttonType="filled" margin="mt-8" />
-</section>
+</main>

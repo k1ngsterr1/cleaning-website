@@ -14,8 +14,6 @@ export const useMenuAnimation = (
         const tl = gsap.timeline();
 
         if (isOpen) {
-          console.log("Opening menu is working here", menuRef.current);
-
           tl.to(menuRef.current, {
             y: "2000%",
             autoAlpha: 1,
@@ -24,8 +22,6 @@ export const useMenuAnimation = (
             ease: "power3.out",
           });
         } else {
-          console.log("isOpen is false");
-
           tl.to(menuRef.current, {
             y: "-2000%",
             autoAlpha: 0,

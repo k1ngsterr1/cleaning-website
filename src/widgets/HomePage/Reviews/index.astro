@@ -1,8 +1,6 @@
 ---
-import { ServiceCardList } from "@features/ServiceCardsList";
-import { Swiper } from "@features/Swiper";
+import ReactButton from "@shared/ui/ReactButton";
 import { ReviewSwiper } from "@features/ReviewSwiper";
-import Button from "@shared/ui/Button/index.astro";
 ---
 
 <section class="container bg-main_blue mt-16">
@@ -13,5 +11,12 @@ import Button from "@shared/ui/Button/index.astro";
     quis nostrud exercitation ullamco laboris
   </p>
   <ReviewSwiper client:load />
-  <Button buttonType="outline-yellow" text="About Us" margin="mt-4 mb-12" />
+
+  <ReactButton
+    buttonType="outline-yellow"
+    text="About Us"
+    margin="mt-4 mb-12"
+    onClick={() => console.log("Button clicked")}
+    client:load
+  />
 </section>

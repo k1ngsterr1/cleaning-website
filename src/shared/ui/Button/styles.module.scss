@@ -5,10 +5,37 @@
 .button {
   width: clamp(130px, 60.746399999999994vw, 520px);
   height: clamp(27.5px, 12.8502vw, 110px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s all;
 
   @include respond-to("xxs") {
     font-size: clamp(7px, 3.889vw, 28px);
+  }
+
+  @include respond-to("xs") {
+    width: clamp(130px, 54.166666666666664vw, 520px);
+    height: clamp(27.5px, 11.458333333333334vw, 110px);
+    font-size: clamp(7px, 2.9166666666666665vw, 28px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(130px, 33.854166666666664vw, 520px);
+    height: clamp(27.5px, 7.161458333333333vw, 110px);
+    font-size: clamp(7px, 1.8229166666666667vw, 28px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(130px, 26.20967741935484vw, 520px);
+    height: clamp(27.5px, 5.544354838709677vw, 110px);
+    font-size: clamp(7px, 1.4112903225806452vw, 28px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(130px, 21.666666666666668vw, 520px);
+    height: clamp(27.5px, 4.583333333333333vw, 110px);
+    font-size: clamp(7px, 1.1666666666666667vw, 28px);
   }
 }
 

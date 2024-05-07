@@ -15,6 +15,9 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, menuRef }) => {
           {link.label}
         </a>
       ))}
+      <a href="telto:7207099413" className={styles.burger_menu__phone}>
+        (720) 709-9413
+      </a>
     </div>
   );
 };

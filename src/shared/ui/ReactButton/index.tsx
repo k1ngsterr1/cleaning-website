@@ -1,16 +1,20 @@
 import React from "react";
 import styles from "../Button/styles.module.scss";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   margin?: string;
   text: string;
-  buttonType: "filled" | "outline";
+  buttonType: "filled" | "outline" | "outline-yellow";
+  to?: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const ReactButton: React.FC<ButtonProps> = ({
   margin,
   text,
   buttonType,
+  onClick,
   ...rest
 }) => {
   const buttonClass = `${styles.button} ${styles[buttonType]} ${
@@ -18,10 +22,10 @@ const Button: React.FC<ButtonProps> = ({
   }`;
 
   return (
-    <button className={buttonClass} {...rest}>
+    <button className={buttonClass} {...rest} onClick={onClick}>
       {text}
     </button>
   );
 };
 
-export default Button;
+export default ReactButton;

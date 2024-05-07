@@ -4,6 +4,7 @@ import { navLinks } from "@shared/lib/content/links";
 
 import styles from "./styles.module.scss";
 import Button from "@shared/ui/ReactButton";
+import { ReactLink } from "@shared/ui/ReactLink";
 
 export const Footer = () => {
   return (
@@ -23,7 +24,12 @@ export const Footer = () => {
       <a className={styles.footer__link} href="tel:7207099413">
         (720) 709-9413
       </a>
-      <Button text="Go Up" buttonType="filled" margin="mt-8 mb-8" />
+      <ReactLink
+        text="Go Up"
+        buttonType="filled"
+        margin="mt-8 mb-8"
+        to="main"
+      />
     </footer>
   );
 };

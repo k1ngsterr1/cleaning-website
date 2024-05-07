@@ -14,7 +14,53 @@ body {
   @apply font-gothamProReg;
 }
 
-.container {
+.smaller {
+  display: flex;
+  @include respond-to("xxs") {
+    display: flex;
+  }
+
+  @include respond-to("xs") {
+    display: flex;
+  }
+
+  @include respond-to("sm") {
+    display: flex;
+  }
+
+  @include respond-to("md") {
+    display: none;
+  }
+
+  @include respond-to("lg") {
+    display: none;
+  }
+}
+
+.bigger {
+  display: flex;
+  @include respond-to("xxs") {
+    display: none;
+  }
+
+  @include respond-to("xs") {
+    display: none;
+  }
+
+  @include respond-to("sm") {
+    display: none;
+  }
+
+  @include respond-to("md") {
+    display: flex;
+  }
+
+  @include respond-to("lg") {
+    display: flex;
+  }
+}
+
+.content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,20 +68,25 @@ body {
   justify-content: center;
 
   @include respond-to("xxs") {
-    // width: 90%;
+    width: 100%;
   }
 
   @include respond-to("xs") {
-    // width: 90%;
+    width: 100%;
   }
 
   @include respond-to("sm") {
+    width: 100%;
   }
 
   @include respond-to("md") {
+    width: 86.45833333333333%;
+    margin: auto;
   }
 
   @include respond-to("lg") {
+    width: 86.45833333333333%;
+    margin: auto;
   }
 }
 
@@ -59,10 +110,14 @@ h1 {
   }
 
   @include respond-to("md") {
+    width: 60%;
+    text-align: left;
     font-size: clamp(20px, 4.032258064516129vw, 80px);
   }
 
   @include respond-to("lg") {
+    width: 60%;
+    text-align: left;
     font-size: clamp(32.5px, 3.3852vw, 130px);
   }
 }
@@ -79,6 +134,22 @@ h6 {
     font-size: clamp(14px, 7.778vw, 56px);
   }
 
+  @include respond-to("xs") {
+    font-size: clamp(14px, 5.833333333333333vw, 56px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(14px, 3.6458333333333335vw, 56px);
+  }
+
+  @include respond-to("md") {
+    font-size: clamp(14px, 2.8225806451612905vw, 56px);
+  }
+
+  @include respond-to("lg") {
+    font-size: clamp(14px, 2.3333333333333335vw, 56px);
+  }
+
   @apply font-gothamBoldReg;
   @apply font-bold;
   @apply text-main_blue;
@@ -88,9 +159,29 @@ h6 {
   width: 90%;
   text-align: center;
   font-size: clamp(15px, 7.0092vw, 60px);
+
   @include respond-to("xxs") {
     font-size: clamp(7px, 3.889vw, 28px);
   }
+
+  @include respond-to("xs") {
+    font-size: clamp(7px, 2.9166666666666665vw, 28px);
+  }
+
+  @include respond-to("sm") {
+    font-size: clamp(7px, 1.8229166666666667vw, 28px);
+  }
+
+  @include respond-to("md") {
+    text-align: left;
+    font-size: clamp(7px, 1.4112903225806452vw, 28px);
+  }
+
+  @include respond-to("lg") {
+    text-align: left;
+    font-size: clamp(7px, 1.1666666666666667vw, 28px);
+  }
+
   @apply text-base;
   @apply text-dark_blue;
   @apply font-gothamLightReg;

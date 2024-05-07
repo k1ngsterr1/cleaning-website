@@ -16,7 +16,7 @@ export const Form = () => {
   };
 
   return (
-    <div className={styles.form_container}>
+    <div className={styles.form_container} id="form">
       <h5 className="text-center text-dark_blue">
         Contact <span className="text-main_blue">Us</span>
       </h5>

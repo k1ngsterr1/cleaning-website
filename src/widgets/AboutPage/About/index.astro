@@ -1,5 +1,6 @@
 ---
 import Button from "@shared/ui/Button/index.astro";
+import { ReactLink } from "@shared/ui/ReactLink";
 ---
 
 <section>
@@ -23,6 +24,12 @@ import Button from "@shared/ui/Button/index.astro";
       expectations. Let us take care of the cleanliness of your home so you can
       enjoy your free time and comfort without any extra hassle.
     </p>
-    <Button text="Contact Us" margin="mt-4" buttonType="filled" />
+    <ReactLink
+      text="Contact Us"
+      margin="mt-4"
+      buttonType="filled"
+      to="form"
+      client:load
+    />
   </div>
 </section>

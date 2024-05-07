@@ -10,7 +10,33 @@
   justify-content: center;
 
   @include respond-to("xxs") {
+    width: clamp(16px, 8.88888888888889vw, 64px);
+    height: clamp(16px, 8.88888888888889vw, 64px);
     font-size: clamp(6px, 3.333vw, 24px);
+  }
+
+  @include respond-to("xs") {
+    width: clamp(16px, 6.666666666666667vw, 64px);
+    height: clamp(16px, 6.666666666666667vw, 64px);
+    font-size: clamp(6px, 2.5vw, 24px);
+  }
+
+  @include respond-to("sm") {
+    width: clamp(16px, 4.166666666666667vw, 64px);
+    height: clamp(16px, 4.166666666666667vw, 64px);
+    font-size: clamp(6px, 1.5625vw, 24px);
+  }
+
+  @include respond-to("md") {
+    width: clamp(16px, 3.225806451612903vw, 64px);
+    height: clamp(16px, 3.225806451612903vw, 64px);
+    font-size: clamp(6px, 1.208vw, 24px);
+  }
+
+  @include respond-to("lg") {
+    width: clamp(16px, 2.6666666666666665vw, 64px);
+    height: clamp(16px, 2.6666666666666665vw, 64px);
+    font-size: clamp(6px, 1vw, 24px);
   }
 
   @apply mt-3;

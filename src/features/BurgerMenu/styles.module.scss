@@ -16,4 +16,10 @@
     @apply font-gothamMediumReg;
     @apply text-main_blue;
   }
+
+  &__phone {
+    @apply text-xl;
+    @apply mt-8;
+    @apply text-main_blue;
+  }
 }
