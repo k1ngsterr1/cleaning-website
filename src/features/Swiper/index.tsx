@@ -1,5 +1,5 @@
 import React, { useState, useEffect, type ReactNode } from "react";
-import { useSwiper } from "@shared/lib/useSwiper";
+import { useSwiper } from "@shared/lib/hooks/useSwiper";
 import { SwiperButton } from "@shared/ui/SwiperButton";
 import {
   faChevronLeft,

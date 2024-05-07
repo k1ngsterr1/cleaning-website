@@ -1,11 +1,15 @@
-import React from "react";
-import { navLinks } from "@shared/lib/links";
+import { navLinks } from "@shared/lib/content/links";
 
 import styles from "./styles.module.scss";
 
-export const BurgerMenu = () => {
+interface IBurgerMenuProps {
+  isOpen: boolean;
+  menuRef: React.RefObject<HTMLDivElement>;
+}
+
+export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ isOpen, menuRef }) => {
   return (
-    <div className={styles.burger_menu}>
+    <div className={styles.burger_menu} ref={menuRef}>
       {navLinks.map((link) => (
         <a href={link.href} className={styles.burger_menu__link}>
           {link.label}

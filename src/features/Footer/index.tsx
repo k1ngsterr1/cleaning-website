@@ -1,6 +1,6 @@
 import React from "react";
 import { Logo } from "@entities/Logo";
-import { navLinks } from "@shared/lib/links";
+import { navLinks } from "@shared/lib/content/links";
 
 import styles from "./styles.module.scss";
 import Button from "@shared/ui/ReactButton";

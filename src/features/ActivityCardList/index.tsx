@@ -1,5 +1,5 @@
 import { ActivityCard } from "@entities/ActivityCard";
-import { activitiesContent } from "@shared/lib/activitiesContent";
+import { activitiesContent } from "@shared/lib/content/activitiesContent";
 
 export const ActivityCardList = () => {
   return (

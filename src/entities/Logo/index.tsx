@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 interface ILogoProps {
   color?: string;
-  margin: string;
+  margin?: string;
 }
 
 export const Logo: React.FC<ILogoProps> = ({ color, margin }) => {

@@ -1,4 +1,4 @@
-import { cardsContent } from "@shared/lib/servicesCardsContent";
+import { cardsContent } from "@shared/lib/content/servicesCardsContent";
 import { ServiceCard } from "@entities/ServiceCard";
 import { useState } from "react";
 import { Popup } from "@features/Popup";
@@ -8,12 +8,10 @@ export const ServiceCardList = () => {
 
   const handleOpenPopup = () => {
     setPopup(true);
-    console.log("isPopup:", isPopup);
   };
 
   const handleClosePopup = () => {
     setPopup(false);
-    console.log("isPopup:", isPopup);
   };
 
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { options } from "@shared/lib/options";
+import { options } from "@shared/lib/content/options";
 import Input from "@shared/ui/Input";
 import Selector from "@shared/ui/Selector";
 import Button from "@shared/ui/ReactButton";

@@ -1,5 +1,5 @@
 import { ServiceCard } from "@entities/ServiceCard";
-import { featuresContent } from "@shared/lib/featureContent";
+import { featuresContent } from "@shared/lib/content/featureContent";
 
 export const FeatureCardList = () => {
   return (
