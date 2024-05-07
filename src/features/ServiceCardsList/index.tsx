@@ -3,6 +3,8 @@ import { ServiceCard } from "@entities/ServiceCard";
 import { useState } from "react";
 import { Popup } from "@features/Popup";
 
+import styles from "./styles.module.scss";
+
 export const ServiceCardList = () => {
   const [isPopup, setPopup] = useState<boolean>(false);
 
@@ -17,16 +19,30 @@ export const ServiceCardList = () => {
   return (
     <>
       {isPopup && <Popup onClick={handleClosePopup} />}
-      {cardsContent.map((card, index) => (
-        <ServiceCard
-          key={index}
-          icon={card.icon}
-          heading={card.title}
-          price={card.price}
-          paragraph={card.description}
-          onClick={handleOpenPopup}
-        />
-      ))}
+      <div className={styles.serviceCardMob}>
+        {cardsContent.map((card, index) => (
+          <ServiceCard
+            key={index}
+            icon={card.icon}
+            heading={card.title}
+            price={card.price}
+            paragraph={card.description}
+            onClick={handleOpenPopup}
+          />
+        ))}
+      </div>
+      <div className={styles.serviceCardList}>
+        {cardsContent.map((card, index) => (
+          <ServiceCard
+            key={index}
+            icon={card.icon}
+            heading={card.title}
+            price={card.price}
+            paragraph={card.description}
+            onClick={handleOpenPopup}
+          />
+        ))}
+      </div>
     </>
   );
 };

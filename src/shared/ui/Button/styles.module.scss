@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: 0.3s all;
 
   @include respond-to("xxs") {
@@ -36,6 +37,17 @@
     width: clamp(130px, 21.666666666666668vw, 520px);
     height: clamp(27.5px, 4.583333333333333vw, 110px);
     font-size: clamp(7px, 1.1666666666666667vw, 28px);
+  }
+
+  @include respond-to("xl") {
+    width: clamp(130px, 19.11764705882353vw, 520px);
+    height: clamp(27.5px, 4.044117647058823vw, 110px);
+    font-size: clamp(7px, 1.0294117647058822vw, 28px);
+  }
+  @include respond-to("2xl") {
+    width: clamp(130px, 13.5408vw, 520px);
+    height: clamp(27.5px, 2.8644000000000003vw, 110px);
+    font-size: clamp(7px, 0.72912vw, 28px);
   }
 }
 

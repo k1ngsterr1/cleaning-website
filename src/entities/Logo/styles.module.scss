@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins";
+
 .logo {
   transition: 0.3s all;
   @apply text-xl;
@@ -6,5 +10,9 @@
   @apply text-main_blue;
   &:hover {
     @apply text-yellow;
+  }
+
+  @include respond-to("md") {
+    @apply text-2xl;
   }
 }

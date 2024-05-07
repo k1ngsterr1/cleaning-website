@@ -1,0 +1,45 @@
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
+@import "breakpoint-slicer";
+
+.serviceCardMob {
+  @include respond-to("xxs") {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    @apply gap-8;
+    justify-content: center;
+  }
+
+  @include respond-to("xs") {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    @apply gap-8;
+    justify-content: center;
+  }
+}
+
+.serviceCardList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: clamp(8px, 0.83328vw, 32px);
+  padding: clamp(10px, 1.0416vw, 40px);
+
+  @include respond-to("xxs") {
+    display: none;
+  }
+
+  @include respond-to("xs") {
+    display: none;
+  }
+
+  @include respond-to("lg") {
+    display: grid;
+  }
+}

@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins";
+
 .header_mob {
   width: 90%;
   display: flex;
@@ -5,4 +9,53 @@
   justify-content: space-between;
   margin: auto;
   @apply mt-8;
+
+  @include respond-to("md") {
+    display: none;
+  }
+
+  @include respond-to("md") {
+    display: none;
+  }
+}
+
+.header_pc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  @apply mt-8;
+
+  &__link {
+    @apply text-lg;
+    transition: 0.3s all;
+    &:hover {
+      @apply text-main_blue;
+    }
+  }
+
+  &__number {
+    transition: 0.3s all;
+    &:hover {
+      @apply text-main_blue;
+    }
+  }
+
+  @include respond-to("xxs") {
+    display: none;
+  }
+
+  @include respond-to("xs") {
+    display: none;
+  }
+
+  @include respond-to("sm") {
+    display: none;
+  }
+
+  @include respond-to("md") {
+    @apply text-lg;
+    display: flex;
+  }
 }

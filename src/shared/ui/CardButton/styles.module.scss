@@ -8,6 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @apply mt-3;
+  @apply p-2;
+  @apply bg-yellow;
+  @apply text-dark_blue;
+  @apply rounded-full;
+  transition: 0.3s all;
 
   @include respond-to("xxs") {
     width: clamp(16px, 8.88888888888889vw, 64px);
@@ -39,14 +45,30 @@
     font-size: clamp(6px, 1vw, 24px);
   }
 
-  @apply mt-3;
-  @apply p-2;
-  @apply bg-yellow;
-  @apply text-dark_blue;
-  @apply rounded-full;
-  transition: 0.3s all;
+  @include respond-to("xl") {
+    width: clamp(16px, 2.3529411764705883vw, 64px);
+    height: clamp(16px, 2.3529411764705883vw, 64px);
+    font-size: clamp(6px, 1vw, 24px);
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(16px, 1.66656vw, 64px);
+    height: clamp(16px, 1.66656vw, 64px);
+    font-size: clamp(6px, 1vw, 24px);
+  }
+
   &:hover {
     @apply bg-dark_blue;
     @apply text-yellow;
+  }
+
+  &__icon {
+    @include respond-to("xl") {
+      font-size: clamp(6px, 0.8823529411764706vw, 24px);
+    }
+
+    @include respond-to("2xl") {
+      font-size: clamp(6px, 0.62496vw, 24px);
+    }
   }
 }

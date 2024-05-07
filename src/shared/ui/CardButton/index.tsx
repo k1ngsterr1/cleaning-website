@@ -12,7 +12,7 @@ interface ICardButtonProps {
 export const CardButton: React.FC<ICardButtonProps> = ({ onClick }) => {
   return (
     <button className={styles.button} onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronRight} />
+      <FontAwesomeIcon icon={faChevronRight} className={styles.button__icon} />
     </button>
   );
 };

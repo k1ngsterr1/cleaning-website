@@ -1,0 +1,18 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/mixins";
+
+.about_block_mob {
+  @include respond-to("md") {
+    display: none;
+  }
+}
+
+.about_block_pc {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @apply gap-16;
+  @apply mt-64;
+}
