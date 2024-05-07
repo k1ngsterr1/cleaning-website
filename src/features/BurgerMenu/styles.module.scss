@@ -8,11 +8,11 @@
   position: fixed;
   top: -2000%;
   left: 0px;
-  @apply gap-2;
+  @apply gap-4;
   @apply bg-white;
 
   &__link {
-    @apply text-2xl;
+    @apply text-3xl;
     @apply font-gothamMediumReg;
     @apply text-main_blue;
   }
