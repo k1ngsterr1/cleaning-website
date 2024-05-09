@@ -4,11 +4,9 @@ import { useMenuAnimation } from "@shared/lib/hooks/useMenuAnimation";
 import { useBurgerButtonAnimation } from "@shared/lib/hooks/useBurgerButtonAnimation";
 import { Logo } from "@entities/Logo";
 import { BurgerButton } from "@shared/ui/BurgerButton";
+import { navLinks } from "@shared/lib/content/links";
 
 import styles from "./styles.module.scss";
-import { navLinks } from "@shared/lib/content/links";
-import ReactButton from "@shared/ui/ReactButton";
-import { ReactLink } from "@shared/ui/ReactLink";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

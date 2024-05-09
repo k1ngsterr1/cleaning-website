@@ -29,6 +29,11 @@
 
   &__link {
     @apply text-lg;
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
+
     transition: 0.3s all;
     &:hover {
       @apply text-main_blue;
@@ -37,6 +42,11 @@
 
   &__number {
     transition: 0.3s all;
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
+
     &:hover {
       @apply text-main_blue;
     }

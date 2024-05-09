@@ -1,13 +1,15 @@
 ---
 import { ServiceCardList } from "@features/ServiceCardsList";
 import Button from "@shared/ui/Button/index.astro";
+
+import styles from "./styles.module.scss"
 ---
 
 <main class="mb-16 mt-16 flex flex-col items-center" id="main">
   <h4 class="text-center">
     <span class="text-dark_blue">OUR</span> SERVICES
   </h4>
-  <p class="paragraph w-[80%] text-center mt-4 m-auto">
+  <p class={`paragraph w-[80%] text-center mt-4 m-auto ${styles.paragraph}`}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris

@@ -1,0 +1,10 @@
+@import "../../../shared/styles/mixins.scss";
+@import "../../../shared/styles/variables.scss";
+@import "breakpoint-slicer";
+
+@include respond-to("lg") {
+  .paragraph {
+    width: 80%;
+    text-align: center;
+  }
+}

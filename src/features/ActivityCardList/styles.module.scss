@@ -1,0 +1,21 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
+@include respond-to("xxs") {
+  .activitiesCardList {
+    display: none;
+  }
+}
+
+@include respond-to("lg") {
+  .activitiesCardListMob {
+    display: none;
+  }
+
+  .activitiesCardList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}

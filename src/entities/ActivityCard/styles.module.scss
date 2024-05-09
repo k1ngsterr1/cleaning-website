@@ -44,3 +44,18 @@
     @apply text-yellow;
   }
 }
+
+@include respond-to("lg") {
+  .activity_card {
+    width: clamp(150px, 22.059vw, 600px);
+    min-height: clamp(25px, 3.676vw, 100px);
+
+    &__icon {
+      @apply text-3xl;
+    }
+
+    &__paragraph {
+      @apply text-base;
+    }
+  }
+}

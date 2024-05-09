@@ -37,6 +37,7 @@
   }
 
   @include respond-to("lg") {
+    width: 270px;
     min-height: clamp(150px, 25vw, 600px);
   }
 
@@ -107,7 +108,8 @@
     }
 
     @include respond-to("lg") {
-      font-size: clamp(12px, 2vw, 48px);
+      font-size: clamp(10px, 1.471vw, 40px);
+      // font-size: clamp(12px, 2vw, 48px);
     }
 
     @include respond-to("xl") {

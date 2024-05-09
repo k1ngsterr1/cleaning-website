@@ -9,8 +9,8 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
-    @apply gap-8;
     justify-content: center;
+    @apply gap-8;
   }
 
   @include respond-to("xs") {
@@ -61,5 +61,7 @@
 
   .featureCardList {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
 }
