@@ -39,7 +39,65 @@
     display: none;
   }
 
+  @include respond-to("md") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
   @include respond-to("lg") {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @include respond-to("xl") {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @include respond-to("2xl") {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+@include respond-to("xxs") {
+  .serviceCardList {
+    display: none;
+  }
+}
+
+@include respond-to("xs") {
+  .serviceCardList {
+    display: none;
+  }
+}
+
+@include respond-to("md") {
+  .serviceCardList {
+    display: none;
+  }
+}
+
+@include respond-to("lg") {
+  .serviceCardMob {
+    display: none;
+  }
+
+  .serviceCardList {
+    display: grid;
+  }
+}
+
+@include respond-to("xl") {
+  .serviceCardList {
+    display: grid;
+  }
+}
+
+@include respond-to("2xl") {
+  .serviceCardList {
     display: grid;
   }
 }

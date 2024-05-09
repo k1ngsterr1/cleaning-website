@@ -4,6 +4,7 @@
 
 .service_card {
   width: 85%;
+  position: relative;
   min-height: clamp(150px, 70.092vw, 600px);
   background: transparent;
   border: 2px solid;
@@ -16,7 +17,7 @@
   @apply pl-4;
   @apply pt-4;
   @apply pr-2;
-  @apply pb-4;
+  @apply pb-14;
   @apply border-gray-400;
 
   @include respond-to("xxs") {
@@ -40,6 +41,7 @@
   }
 
   @include respond-to("xl") {
+    width: clamp(145px, 21.324vw, 580px);
     min-height: clamp(150px, 22.058823529411764vw, 600px);
   }
 
@@ -109,7 +111,8 @@
     }
 
     @include respond-to("xl") {
-      font-size: clamp(12px, 1.7647058823529411vw, 48px);
+      width: 90%;
+      font-size: clamp(10px, 1.471vw, 40px);
     }
 
     @include respond-to("2xl") {
@@ -120,10 +123,11 @@
   &__paragraph {
     width: 80%;
     font-size: clamp(6.5px, 3.611vw, 26px);
+    transition: 0.3s all;
+    @apply mb-3;
     @apply text-dark_blue;
     @apply font-gothamLightReg;
     @apply mt-2;
-    transition: 0.3s all;
 
     @include respond-to("xxs") {
       font-size: clamp(6.5px, 3.611111111111111vw, 26px);

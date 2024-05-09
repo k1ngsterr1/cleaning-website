@@ -1,3 +1,7 @@
+// @import "breakpoint-slicer";
+// @import "../../styles/variables.scss";
+// @import "../../styles/mixins.scss";
+
 .layout {
   width: 100vw;
   height: 100vh;
@@ -20,11 +24,14 @@
   align-items: center;
   justify-content: center;
   border: 2px solid;
+  z-index: 5000;
   @apply p-8;
   @apply rounded-md;
   @apply border-main_blue;
   @apply bg-white;
   @apply shadow-lg;
+
+  // @include
 
   &__heading {
     @apply text-2xl;
