@@ -77,4 +77,8 @@
     @apply text-lg;
     display: flex;
   }
+
+  @include respond-to("2xl") {
+    @apply mt-14;
+  }
 }

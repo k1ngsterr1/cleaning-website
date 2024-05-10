@@ -32,7 +32,7 @@ export const Header = () => {
       </header>
       <header className={styles.header_pc}>
         <Logo />
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-4 ">
           {navLinks.map((link) => (
             <a href={link.href} className={styles.header_pc__link}>
               {link.label}
