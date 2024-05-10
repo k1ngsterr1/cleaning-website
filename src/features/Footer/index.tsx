@@ -31,7 +31,29 @@ export const Footer = () => {
           to="main"
         />
       </footer>
-      <footer className={styles.footer_pc}></footer>
+      <footer className={styles.footer_pc}>
+        {" "}
+        <Logo color="!text-dark_blue" margin="mt-0" />
+        <nav className={styles.footer_pc__nav}>
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className={styles.footer_pc__nav__link}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <div className="flex items-center justify-center gap-4">
+          <ReactLink
+            text="Go Up"
+            buttonType="filled"
+            margin="mt-8 mb-8"
+            to="main"
+          />
+        </div>
+      </footer>
     </>
   );
 };
