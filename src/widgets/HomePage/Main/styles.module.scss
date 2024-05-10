@@ -15,7 +15,17 @@
   }
 }
 
+@include respond-to("xxs") {
+  .main_pc {
+    display: none;
+  }
+}
+
 @include respond-to("lg") {
+  .main_pc {
+    display: flex;
+  }
+
   .heading {
     width: 50%;
   }

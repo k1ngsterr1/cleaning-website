@@ -22,6 +22,10 @@
     @apply text-sm;
   }
 
+  @include respond-to("2xl") {
+    @apply text-lg;
+  }
+
   &:hover {
     @apply text-main_blue;
     @apply border-yellow;

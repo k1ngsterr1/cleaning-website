@@ -62,6 +62,7 @@ export const Form = () => {
       </div>
       <div
         className={`${styles.form_container_pc} content !flex !items-start m-auto`}
+        id="form-pc"
       >
         <div className="flex flex-col items-start relative">
           <h5 className={`text-center text-dark_blue`}>

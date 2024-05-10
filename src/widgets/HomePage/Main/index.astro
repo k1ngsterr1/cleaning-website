@@ -33,7 +33,7 @@ const { title, paragraph, image } = Astro.props;
     <Button buttonType="text" text="Explore More" margin="mt-2" />
     <img class={styles.image} src={image.src} alt="Cleaning Image" />
   </main>
-  <main class="bigger content flex flex-col" id="main-pc">
+  <main class={`bigger content flex flex-col ${styles.main_pc}`} id="main-pc">
     <Header client:load />
     <div class="w-full flex flex-col items-start mt-16">
       <h1 class={styles.heading}>{title}</h1>

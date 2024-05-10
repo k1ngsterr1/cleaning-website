@@ -25,6 +25,10 @@
     @apply text-sm;
   }
 
+  @include respond-to("2xl") {
+    @apply text-lg;
+  }
+
   &__placeholder {
     @apply text-dark_blue;
   }

@@ -6,6 +6,10 @@
   @include respond-to("md") {
     display: none;
   }
+
+  @include respond-to("xl") {
+    display: none;
+  }
 }
 
 .about_block_pc {
@@ -14,6 +18,14 @@
   justify-content: space-between;
   @apply gap-16;
   @apply mt-64;
+
+  @include respond-to("xxs") {
+    display: none;
+  }
+
+  @include respond-to("lg") {
+    display: flex;
+  }
 
   @include respond-to("xl") {
     @apply mt-80;
