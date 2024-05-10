@@ -1,0 +1,12 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/variables";
+@import "../../../shared/styles/mixins";
+
+@include respond-to("lg") {
+  .paragraph {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    @apply mt-2;
+  }
+}
