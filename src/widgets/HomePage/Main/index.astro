@@ -38,7 +38,7 @@ const { title, paragraph, image } = Astro.props;
     <Header client:load />
     <div class="flex flex-col items-start mt-16">
       <h1 class={styles.heading}>{title}</h1>
-      <p class="paragraph mt-4">{paragraph}</p>
+      <p class={`paragraph mt-4 ${styles.paragraph}`}>{paragraph}</p>
       <div class="flex items-center gap-0">
         <ReactLink
           buttonType="filled"

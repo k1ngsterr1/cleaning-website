@@ -14,3 +14,13 @@
     right: 0;
   }
 }
+
+@include respond-to("lg") {
+  .heading {
+    width: 50%;
+  }
+
+  .paragraph {
+    width: 40% !important;
+  }
+}
