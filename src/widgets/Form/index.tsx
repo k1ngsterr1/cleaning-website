@@ -11,7 +11,6 @@ export const Form = () => {
   const [service, setService] = useState("");
 
   const handleServiceChange = (newValue: string) => {
-    console.log("Selected Service: ", newValue);
     setService(newValue);
   };
 
@@ -61,7 +60,9 @@ export const Form = () => {
         </span>
         <img src={form_image.src} className={styles.image} alt="Form Images" />
       </div>
-      <div className={styles.form_container_pc}>
+      <div
+        className={`${styles.form_container_pc} content !flex !items-start m-auto`}
+      >
         <div className="flex flex-col items-start relative">
           <h5 className={`text-center text-dark_blue`}>
             Contact <span className="text-main_blue">Us</span>

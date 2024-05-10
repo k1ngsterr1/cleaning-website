@@ -1,6 +1,7 @@
 ---
-import Button from "@shared/ui/Button/index.astro";
 import { ReactLink } from "@shared/ui/ReactLink";
+
+import styles from './styles.module.scss'
 ---
 
 <section class="flex flex-col items-center">
@@ -8,7 +9,7 @@ import { ReactLink } from "@shared/ui/ReactLink";
     <span class="text-dark_blue">Book Affordable Services:</span> Save Time And Money
     With Us!
   </h6>
-  <p class="paragraph text-center mt-4 w-[80%]">
+  <p class={`paragraph text-center mt-4 w-[80%] ${styles.paragraph}`}>
     Weekly Cleaning Package": Sign up for our weekly cleaning package and
     receive a 20% discount on each cleaning session. With regular cleaning, you
     can maintain a consistently clean and healthy home environment while saving

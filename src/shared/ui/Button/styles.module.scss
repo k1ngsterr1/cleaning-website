@@ -44,6 +44,7 @@
     height: clamp(27.5px, 4.044117647058823vw, 110px);
     font-size: clamp(7px, 1.0294117647058822vw, 28px);
   }
+
   @include respond-to("2xl") {
     width: clamp(130px, 13.5408vw, 520px);
     height: clamp(27.5px, 2.8644000000000003vw, 110px);

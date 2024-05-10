@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 
 <section>
   <div
-    class=`${'w-full flex flex-col items-center justify-center'} ${styles.about_block_mob}`
+    class=`${'w-full  flex flex-col items-center justify-center'} ${styles.about_block_mob}`
   >
     <h2 class="text-center mt-8">
       <span class="text-main_blue">Discover Our Sparkling Story:</span>
@@ -34,8 +34,8 @@ import styles from "./styles.module.scss";
       client:load
     />
   </div>
-  <div class={styles.about_block_pc}>
-    <h2 class="text-left mt-8 w-[100%]">
+  <div class={`${styles.about_block_pc} content !flex-row m-auto`}>
+    <h2 class="text-left mt-8 w-[90%]">
       <span class="text-main_blue">Discover Our Sparkling Story:</span>
       <span class="text-dark_blue"
         >Unveiling The Passion Behind Our Cleaning Solutions</span

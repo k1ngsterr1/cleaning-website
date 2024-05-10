@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 .swiper_button {
   width: clamp(24px, 11.21472vw, 96px);
   height: clamp(24px, 11.21472vw, 96px);
@@ -5,4 +9,16 @@
   @apply text-dark_blue;
   @apply rounded-full;
   @apply bg-yellow;
+}
+
+@include respond-to("lg") {
+  .swiper_button_next {
+    width: clamp(12px, 2vw, 48px);
+    height: clamp(12px, 2vw, 48px);
+  }
+
+  .swiper_button_prev {
+    width: clamp(12px, 2vw, 48px);
+    height: clamp(12px, 2vw, 48px);
+  }
 }

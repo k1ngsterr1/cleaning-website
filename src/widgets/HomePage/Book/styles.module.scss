@@ -1,0 +1,9 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/mixins.scss";
+
+@include respond-to("lg") {
+  .paragraph {
+    text-align: center;
+  }
+}

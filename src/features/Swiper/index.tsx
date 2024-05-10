@@ -28,7 +28,6 @@ export const Swiper: React.FC<ISwiperProps> = ({ children, slidesPerView }) => {
   const [translateX, setTranslateX] = useState(0); // Initialize translateX state
 
   useEffect(() => {
-    // Update translateX based on currentIndex and slideWidth
     setTranslateX(-currentIndex * step);
   }, [currentIndex, step]);
 
@@ -38,7 +37,7 @@ export const Swiper: React.FC<ISwiperProps> = ({ children, slidesPerView }) => {
         className={styles.swiper_wrapper}
         style={{
           transform: `translateX(${translateX}%)`,
-          width: `${100 * totalSlides}%`, // Ensure the wrapper is wide enough to contain all slides side by side
+          width: `${100 * totalSlides}%`,
         }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -47,7 +46,7 @@ export const Swiper: React.FC<ISwiperProps> = ({ children, slidesPerView }) => {
           <div
             className={styles.swiper_slide}
             key={index}
-            style={{ width: `${100 / totalSlides}%` }} // Each slide should occupy an equal portion of the total width
+            style={{ width: `${100 / totalSlides}%` }}
           >
             {child}
           </div>
