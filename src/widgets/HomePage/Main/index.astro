@@ -11,12 +11,11 @@ interface Props {
 
 import styles from "../Main/styles.module.scss";
 
-
 const { title, paragraph, image } = Astro.props;
 ---
 
 <>
-  <main class="smaller  flex flex-col items-center justify-center" id="main">
+  <main class="smaller flex flex-col items-center justify-center" id="main">
     <Header client:load />
     <h1 class="text-center mt-16">
       {title}
@@ -34,9 +33,9 @@ const { title, paragraph, image } = Astro.props;
     <Button buttonType="text" text="Explore More" margin="mt-2" />
     <img class={styles.image} src={image.src} alt="Cleaning Image" />
   </main>
-  <main class="bigger content flex flex-col">
+  <main class="bigger content flex flex-col" id="main-pc">
     <Header client:load />
-    <div class="w-full flex flex-col items-start  mt-16">
+    <div class="w-full flex flex-col items-start mt-16">
       <h1 class={styles.heading}>{title}</h1>
       <p class={`paragraph mt-4 ${styles.paragraph}`}>{paragraph}</p>
       <div class="flex items-center gap-0">

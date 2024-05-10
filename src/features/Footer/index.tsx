@@ -50,7 +50,7 @@ export const Footer = () => {
             text="Go Up"
             buttonType="filled"
             margin="mt-8 mb-8"
-            to="main"
+            to="main-pc"
           />
         </div>
       </footer>

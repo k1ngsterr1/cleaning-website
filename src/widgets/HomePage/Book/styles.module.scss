@@ -4,6 +4,7 @@
 
 @include respond-to("lg") {
   .paragraph {
+    width: 70%;
     text-align: center;
   }
 }

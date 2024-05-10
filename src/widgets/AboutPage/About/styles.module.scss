@@ -14,4 +14,8 @@
   justify-content: space-between;
   @apply gap-16;
   @apply mt-64;
+
+  @include respond-to("xl") {
+    @apply mt-80;
+  }
 }

@@ -66,3 +66,30 @@
     }
   }
 }
+
+@include respond-to("2xl") {
+  .footer_pc {
+    width: 86.6%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @apply mt-56;
+    @apply gap-8;
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      margin: auto;
+      @apply gap-4;
+
+      &__link {
+        @apply text-lg;
+        transition: 0.3s all;
+        &:hover {
+          @apply text-main_blue;
+        }
+      }
+    }
+  }
+}

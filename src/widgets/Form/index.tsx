@@ -71,7 +71,7 @@ export const Form = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna{" "}
           </p>
-          <form className="flex flex-col items-center">
+          <form className="flex flex-col items-start">
             <Input
               placeholder="Your Name"
               type="text"

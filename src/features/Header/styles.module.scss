@@ -34,7 +34,12 @@
       @apply text-xs;
     }
 
+    @include respond-to("xl") {
+      @apply text-xl;
+    }
+
     transition: 0.3s all;
+
     &:hover {
       @apply text-main_blue;
     }
@@ -45,6 +50,10 @@
 
     @include respond-to("lg") {
       @apply text-xs;
+    }
+
+    @include respond-to("xl") {
+      @apply text-xl;
     }
 
     &:hover {
