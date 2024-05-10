@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
 .review_card {
   width: clamp(175px, 81.774vw, 700px);
   height: auto;
@@ -5,19 +9,41 @@
   @apply bg-white;
   @apply rounded-md;
 
+  @include respond-to("lg") {
+    width: clamp(175px, 25.735vw, 700px);
+  }
+
   &__icon {
     @apply text-2xl;
     @apply text-dark_blue;
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
   }
 
   &__name {
     font-size: clamp(10px, 4.6728vw, 40px);
     @apply font-gothamBoldReg;
+
+    @include respond-to("lg") {
+      @apply text-base;
+    }
   }
 
   &__position {
     @apply mt-1;
     @apply font-gothamProReg;
     @apply text-gray-600;
+
+    @include respond-to("lg") {
+      @apply text-sm;
+    }
+  }
+
+  &__paragraph {
+    @include respond-to("lg") {
+      @apply text-xs;
+    }
   }
 }

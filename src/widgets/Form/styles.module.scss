@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
 .form_container {
   @apply mt-16;
 }
@@ -18,4 +22,48 @@
   width: 100%;
   height: clamp(150px, 70.092vw, 600px);
   @apply mt-8;
+
+  @include respond-to("lg") {
+    position: absolute;
+    width: clamp(400px, 58.824vw, 1600px);
+    height: clamp(300px, 44.118vw, 1200px);
+    right: 0;
+  }
+}
+
+@include respond-to("xxs") {
+  .form_container_pc {
+    display: none;
+  }
+
+  .form_container {
+    display: flex;
+  }
+}
+
+@include respond-to("xs") {
+  .form_container {
+    display: flex;
+  }
+
+  .form_container_pc {
+    display: none;
+  }
+}
+
+@include respond-to("lg") {
+  .form_container {
+    display: none;
+  }
+
+  .form_container_pc {
+    width: 100%;
+    display: flex;
+    @apply mt-32;
+  }
+
+  .paragraph {
+    width: 80%;
+    text-align: center;
+  }
 }

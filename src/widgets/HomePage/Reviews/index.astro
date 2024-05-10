@@ -3,15 +3,14 @@ import ReactButton from "@shared/ui/ReactButton";
 import { ReviewSwiper } from "@features/ReviewSwiper";
 ---
 
-<section class="container bg-main_blue mt-16">
+<section class="content w-full  bg-main_blue mt-16">
   <h5 class="mt-8 text-white">REVIEWS</h5>
-  <p class="paragraph w-[80%] text-center mt-4 !text-white">
+  <p class={`paragraph w-[80%] text-center mt-4 !text-white`}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris
   </p>
   <ReviewSwiper client:load />
-
   <ReactButton
     buttonType="outline-yellow"
     text="About Us"

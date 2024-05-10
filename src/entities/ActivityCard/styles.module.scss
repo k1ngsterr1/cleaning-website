@@ -47,7 +47,7 @@
 
 @include respond-to("lg") {
   .activity_card {
-    width: clamp(150px, 22.059vw, 600px);
+    width: clamp(100px, 14.706vw, 400px) !important;
     min-height: clamp(25px, 3.676vw, 100px);
 
     &__icon {

@@ -1,3 +1,7 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
 .footer {
   width: 100%;
   display: flex;
@@ -31,5 +35,17 @@
     @apply text-lg;
     @apply mt-4;
     @apply mb-4;
+  }
+}
+
+@include respond-to("xxs") {
+  .footer_pc {
+    display: none;
+  }
+}
+
+@include respond-to("lg") {
+  .footer {
+    display: none;
   }
 }

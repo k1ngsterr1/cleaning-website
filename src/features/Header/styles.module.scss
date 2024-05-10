@@ -31,7 +31,7 @@
     @apply text-lg;
 
     @include respond-to("lg") {
-      @apply text-base;
+      @apply text-xs;
     }
 
     transition: 0.3s all;
@@ -44,7 +44,7 @@
     transition: 0.3s all;
 
     @include respond-to("lg") {
-      @apply text-base;
+      @apply text-xs;
     }
 
     &:hover {

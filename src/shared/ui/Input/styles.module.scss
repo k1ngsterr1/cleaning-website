@@ -17,6 +17,11 @@
     font-size: clamp(7px, 3.889vw, 28px);
   }
 
+  @include respond-to("lg") {
+    width: clamp(120px, 17.647vw, 480px);
+    @apply text-sm;
+  }
+
   &:hover {
     @apply text-main_blue;
     @apply border-yellow;

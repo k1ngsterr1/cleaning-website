@@ -17,5 +17,6 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, auto);
+    gap: clamp(10px, 1.471vw, 40px);
   }
 }

@@ -20,6 +20,11 @@
     font-size: clamp(7px, 3.889vw, 28px);
   }
 
+  @include respond-to("lg") {
+    width: clamp(120px, 17.647vw, 480px);
+    @apply text-sm;
+  }
+
   &__placeholder {
     @apply text-dark_blue;
   }
@@ -33,10 +38,19 @@
     @apply bg-gray-200;
     @apply shadow-md;
 
+    @include respond-to("lg") {
+      width: clamp(110px, 16.176vw, 440px);
+    }
+
     &__item {
       @include respond-to("xxs") {
         font-size: clamp(7px, 3.889vw, 28px);
       }
+
+      @include respond-to("lg") {
+        @apply text-base;
+      }
+
       @apply pt-3;
       @apply pb-3;
       @apply text-dark_blue;
