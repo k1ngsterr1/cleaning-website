@@ -1,9 +1,6 @@
 ---
 import { Header } from "@features/Header";
 import Button from "@shared/ui/Button/index.astro";
-
-import styles from "../Main/styles.module.scss";
-import { BurgerMenu } from "@features/BurgerMenu";
 import { ReactLink } from "@shared/ui/ReactLink";
 
 interface Props {
@@ -11,6 +8,9 @@ interface Props {
   image: ImageMetadata;
   paragraph: string;
 }
+
+import styles from "../Main/styles.module.scss";
+
 
 const { title, paragraph, image } = Astro.props;
 ---
@@ -36,7 +36,7 @@ const { title, paragraph, image } = Astro.props;
   </main>
   <main class="bigger content flex flex-col">
     <Header client:load />
-    <div class="flex flex-col items-start mt-16">
+    <div class="w-full flex flex-col items-start  mt-16">
       <h1 class={styles.heading}>{title}</h1>
       <p class={`paragraph mt-4 ${styles.paragraph}`}>{paragraph}</p>
       <div class="flex items-center gap-0">

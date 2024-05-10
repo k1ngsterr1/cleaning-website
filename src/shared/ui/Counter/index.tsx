@@ -12,9 +12,9 @@ interface ICountUpProps {
 export const Counter: React.FC<ICountUpProps> = ({ end, margin }) => {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center justify-center">
         <CountUp end={end} className={`${styles.counter} ${margin}`} />
-        <p className="paragraph">Lorem Ipsum</p>
+        <p className="paragraph !text-center">Lorem Ipsum</p>
       </div>
     </>
   );

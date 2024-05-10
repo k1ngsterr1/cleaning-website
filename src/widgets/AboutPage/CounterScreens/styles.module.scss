@@ -1,0 +1,28 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/variables";
+@import "../../../shared/styles/mixins";
+
+@include respond-to("xxs") {
+  .section_counter_pc {
+    display: none;
+  }
+
+  .section_counter_mob {
+    display: flex;
+  }
+}
+
+@include respond-to("lg") {
+  .section_counter_mob {
+    display: none;
+  }
+
+  .section_counter_pc {
+    width: 86.6%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    @apply mt-10;
+  }
+}
