@@ -1,19 +1,20 @@
-/* Ensuring the swiper container has a fixed height to display correctly */
+@import "breakpoint-slicer";
+@import "../../shared/styles/variables.scss";
+@import "../../shared/styles/mixins.scss";
+
 .swiper_container {
   position: relative;
   overflow: hidden;
-  width: 100%; /* Full width of the parent container */
-  height: auto; /* Adjust based on your content or set a fixed height */
+  width: 100%;
+  height: auto;
 }
 
-/* The wrapper will hold all slides and should be wide enough to hold all slides side by side */
 .swiper_wrapper {
   display: flex;
   transition: 0.3s ease-in-out;
-  width: 100%; /* This should actually be the combined width of all slides, but initially, set to 100% */
+  width: 100%;
 }
 
-/* Each slide should be set to take up the full width of the swiper container to display one slide at a time */
 .swiper_slide {
   width: 100%;
   padding: 20px;
@@ -23,7 +24,6 @@
   align-items: center;
 }
 
-/* Navigation buttons styling */
 .swiper_button_prev,
 .swiper_button_next {
   width: clamp(24px, 11.21472vw, 96px);
@@ -33,17 +33,33 @@
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 100;
+  transition: 0.3s all;
   @apply p-2;
   @apply text-dark_blue;
   @apply rounded-full;
   @apply bg-yellow;
   @apply shadow-md;
+
+  &:hover {
+    @apply bg-main_blue;
+  }
+
+  @include respond-to("xl") {
+    width: clamp(24px, 1.765vw, 96px) !important;
+    height: clamp(24px, 1.765vw, 96px) !important;
+    @apply p-2;
+    @apply text-dark_blue;
+    @apply rounded-full;
+    @apply bg-yellow;
+  }
 }
 
-.swiper_button_prev {
-  left: 10px;
-}
+@include respond-to("xl") {
+  .swiper_button_prev {
+    left: 770px;
+  }
 
-.swiper_button_next {
-  right: 10px;
+  .swiper_button_next {
+    right: 770px;
+  }
 }

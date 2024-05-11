@@ -13,6 +13,10 @@
     width: clamp(175px, 25.735vw, 700px);
   }
 
+  @include respond-to("xl") {
+    width: 450px;
+  }
+
   &__icon {
     @apply text-2xl;
     @apply text-dark_blue;
@@ -29,6 +33,10 @@
     @include respond-to("lg") {
       @apply text-base;
     }
+
+    @include respond-to("xl") {
+      @apply text-lg;
+    }
   }
 
   &__position {
@@ -44,6 +52,10 @@
   &__paragraph {
     @include respond-to("lg") {
       @apply text-xs;
+    }
+
+    @include respond-to("xl") {
+      @apply text-lg;
     }
   }
 }

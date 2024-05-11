@@ -1,5 +1,13 @@
+@import "breakpoint-slicer";
+@import "../../../shared/styles/variables.scss";
+@import "../../../shared/styles/mixins.scss";
+
 .star {
   @apply mt-2;
   @apply text-base;
   @apply text-yellow;
+
+  @include respond-to("xl") {
+    @apply text-xl;
+  }
 }

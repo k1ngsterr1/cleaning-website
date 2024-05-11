@@ -19,9 +19,8 @@ export const ReviewCard: React.FC<IReviewCardProps> = ({
 }) => {
   return (
     <div className={styles.review_card}>
-      <div className="flex gap-2">
-        <FontAwesomeIcon icon={faUser} className={styles.review_card__icon} />
-        <div className="flex flex-col items-start">
+      <div className="flex gap-2 ml-8">
+        <div className="w-full flex flex-col items-start">
           <span className={styles.review_card__name}>{name}</span>
           <span className={styles.review_card__position}>{position}</span>
           <StarsRating rating={5} />

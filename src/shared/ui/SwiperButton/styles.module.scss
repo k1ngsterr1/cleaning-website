@@ -8,17 +8,37 @@
   @apply p-2;
   @apply text-dark_blue;
   @apply rounded-full;
-  @apply bg-yellow;
 }
 
 @include respond-to("lg") {
   .swiper_button_next {
-    width: clamp(12px, 2vw, 48px);
-    height: clamp(12px, 2vw, 48px);
+    width: clamp(12px, 2vw, 48px) !important;
+    height: clamp(12px, 2vw, 48px) !important;
   }
 
   .swiper_button_prev {
-    width: clamp(12px, 2vw, 48px);
-    height: clamp(12px, 2vw, 48px);
+    width: clamp(12px, 2vw, 48px) !important;
+    height: clamp(12px, 2vw, 48px) !important;
+  }
+}
+
+@include respond-to("xl") {
+  .swiper_button {
+    width: clamp(24px, 11.21472vw, 96px) !important;
+    height: clamp(24px, 11.21472vw, 96px) !important;
+    @apply p-2;
+    @apply text-dark_blue;
+    @apply rounded-full;
+    @apply bg-yellow;
+  }
+
+  .swiper_button_next {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  .swiper_button_prev {
+    width: 48px;
+    height: 48px;
   }
 }

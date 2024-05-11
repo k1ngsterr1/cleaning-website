@@ -14,7 +14,6 @@ export const useSwiper = ({ totalSlides, slidesPerView }: UseSwiperArgs) => {
     setCurrentIndex((prevIndex) => {
       let nextIndex = prevIndex + 1;
       if (nextIndex >= totalSlides) nextIndex = totalSlides - 1;
-      console.log("Next Index: ", nextIndex);
       return nextIndex;
     });
   };
@@ -24,7 +23,6 @@ export const useSwiper = ({ totalSlides, slidesPerView }: UseSwiperArgs) => {
     setCurrentIndex((prevIndex) => {
       let prevIndexAdjusted = prevIndex - 1;
       if (prevIndexAdjusted < 0) prevIndexAdjusted = 0;
-      console.log("Previous Index: ", prevIndexAdjusted);
       return prevIndexAdjusted;
     });
   };
