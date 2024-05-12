@@ -29,7 +29,6 @@ export const Form = () => {
           className="flex flex-col items-center"
           onSubmit={(event) => {
             event.preventDefault();
-            console.log("zhopa");
             onSubmit(event);
           }}
         >
@@ -88,7 +87,6 @@ export const Form = () => {
             className="flex flex-col items-start"
             onSubmit={(event) => {
               event.preventDefault();
-              console.log("zhopa");
               onSubmit(event);
             }}
           >
