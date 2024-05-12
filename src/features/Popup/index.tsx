@@ -42,12 +42,12 @@ export const Popup: React.FC<IPopupProps> = ({ onClick }) => {
             name="phone"
             margin="mt-8 m-auto"
           />
-          <Selector
-            placeholder="Choose Your Service"
-            value={service}
-            margin="mt-8"
-            onChange={handleServiceChange}
-            options={options}
+          <Input
+            placeholder="Comment"
+            type="comment"
+            required
+            name="comment"
+            margin="mt-8 m-auto"
           />
           <Button text="Send" buttonType="filled" margin="mt-8" type="submit" />
         </form>

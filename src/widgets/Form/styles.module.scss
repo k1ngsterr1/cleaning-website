@@ -21,6 +21,7 @@
 .image {
   width: 100%;
   height: clamp(150px, 70.092vw, 600px);
+  z-index: 0 !important;
   @apply mt-8;
 
   @include respond-to("lg") {
@@ -28,16 +29,19 @@
     width: clamp(400px, 58.824vw, 1600px);
     height: clamp(300px, 44.118vw, 1200px);
     right: 0;
+    z-index: 0 !important;
   }
 
   @include respond-to("xl") {
     width: clamp(550px, 57.288000000000004vw, 2200px);
     height: clamp(375px, 39.06vw, 1500px);
+    z-index: 0 !important;
   }
 
   @include respond-to("2xl") {
     width: clamp(600px, 62.496vw, 2400px);
     height: clamp(375px, 39.06vw, 1500px);
+    z-index: 0 !important;
   }
 }
 

@@ -1,6 +1,6 @@
-// @import "breakpoint-slicer";
-// @import "../../styles/variables.scss";
-// @import "../../styles/mixins.scss";
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
 
 .layout {
   width: 100vw;
@@ -13,6 +13,7 @@
   left: 50%;
   top: 0;
   transform: translate(-50%, 0);
+  z-index: 5000 !important;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -23,15 +24,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid;
-  z-index: 5000;
+  border: 4px solid;
+  z-index: 5000 !important;
   @apply p-8;
   @apply rounded-md;
   @apply border-main_blue;
   @apply bg-white;
   @apply shadow-lg;
 
-  // @include
+  &__text {
+    text-align: center;
+    @apply mt-8;
+  }
+
+  @include respond-to("2xl") {
+    width: clamp(250px, 26.04vw, 1000px);
+  }
 
   &__heading {
     @apply text-2xl;

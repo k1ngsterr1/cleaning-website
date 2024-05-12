@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
+import { SuccessPopup } from "@features/SuccessPopup";
 import Input from "@shared/ui/Input";
 import Button from "@shared/ui/ReactButton";
 import form_image from "@assets/images/form.webp";
@@ -10,12 +11,17 @@ export const Form = () => {
   const [name, setName] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [comment, setCommnet] = useState<string>("");
-  const [isPopupOpen, setPopupOpen] = useState(false);
+  const [isPopupOpen, setPopupOpen] = useState<boolean>(false);
   const { onSubmit } = useSendEmail(setPopupOpen);
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+  };
 
   return (
     <>
       <div className={styles.form_container} id="form">
+        {isPopupOpen && <SuccessPopup onClick={handleClosePopup} />}
         <h5 className={`text-center text-dark_blue`}>
           Contact <span className="text-main_blue">Us</span>
         </h5>
@@ -75,6 +81,7 @@ export const Form = () => {
         className={`${styles.form_container_pc} content !flex !items-start m-auto`}
         id="form-pc"
       >
+        {isPopupOpen && <SuccessPopup onClick={handleClosePopup} />}
         <div className="flex flex-col items-start relative">
           <h5 className={`text-center text-dark_blue`}>
             Contact <span className="text-main_blue">Us</span>

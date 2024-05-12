@@ -9,7 +9,6 @@ interface IFormData {
 
 export function useSendEmail(setPopupOpen: (isOpen: boolean) => void) {
   const onSubmit = async (event?: React.BaseSyntheticEvent) => {
-    console.log("on submit is working");
     if (event) {
       event.preventDefault();
 
