@@ -6,6 +6,15 @@
   .activitiesCardList {
     display: none;
   }
+
+  .activitiesCardListMob {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 4.444vw, 32px);
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @include respond-to("lg") {

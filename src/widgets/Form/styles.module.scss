@@ -6,6 +6,9 @@
   @apply mt-16;
 }
 
+.form_container_pc {
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -67,7 +70,7 @@
 
 @include respond-to("lg") {
   .form_container {
-    display: none;
+    display: none !important;
   }
 
   .form_container_pc {

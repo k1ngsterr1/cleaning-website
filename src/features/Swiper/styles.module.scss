@@ -44,22 +44,44 @@
     @apply bg-main_blue;
   }
 
-  @include respond-to("xl") {
-    width: clamp(24px, 1.765vw, 96px) !important;
-    height: clamp(24px, 1.765vw, 96px) !important;
-    @apply p-2;
-    @apply text-dark_blue;
-    @apply rounded-full;
-    @apply bg-yellow;
+  @include respond-to("xss") {
+  }
+
+  // @include respond-to("xl") {
+  //   width: clamp(24px, 1.765vw, 96px) !important;
+  //   height: clamp(24px, 1.765vw, 96px) !important;
+  //   @apply p-2;
+  //   @apply text-dark_blue;
+  //   @apply rounded-full;
+  //   @apply bg-yellow;
+  // }
+}
+
+@include respond-to("xxs") {
+  .swiper_button_prev {
+    left: clamp(10px, 5.556vw, 40px);
+  }
+  .swiper_button_next {
+    right: clamp(10px, 5.556vw, 40px);
   }
 }
 
 @include respond-to("xl") {
   .swiper_button_prev {
-    left: 770px;
+    left: clamp(385px, 56.618vw, 1360px);
   }
 
   .swiper_button_next {
-    right: 770px;
+    right: clamp(385px, 56.618vw, 1360px);
+  }
+
+  @include respond-to("2xl") {
+    .swiper_button_prev {
+      left: clamp(325px, 33.852000000000004vw, 1300px);
+    }
+
+    .swiper_button_next {
+      right: clamp(325px, 33.852000000000004vw, 1300px);
+    }
   }
 }

@@ -20,7 +20,10 @@ export const Form = () => {
 
   return (
     <>
-      <div className={styles.form_container} id="form">
+      <div
+        className={`${styles.form_container} !flex !flex-col items-center`}
+        id="form"
+      >
         {isPopupOpen && <SuccessPopup onClick={handleClosePopup} />}
         <h5 className={`text-center text-dark_blue`}>
           Contact <span className="text-main_blue">Us</span>
@@ -78,7 +81,7 @@ export const Form = () => {
         <img src={form_image.src} className={styles.image} alt="Form Images" />
       </div>
       <div
-        className={`${styles.form_container_pc} content !flex !items-start m-auto`}
+        className={`${styles.form_container_pc} content !flex !items-start !justify-center m-auto`}
         id="form-pc"
       >
         {isPopupOpen && <SuccessPopup onClick={handleClosePopup} />}
