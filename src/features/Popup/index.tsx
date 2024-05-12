@@ -5,18 +5,17 @@ import Selector from "@shared/ui/Selector";
 import Button from "@shared/ui/ReactButton";
 
 import styles from "./styles.module.scss";
+import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 
 interface IPopupProps {
   onClick: () => void;
 }
 
 export const Popup: React.FC<IPopupProps> = ({ onClick }) => {
-  const [service, setService] = useState("");
-
-  const handleServiceChange = (newValue: string) => {
-    console.log("Selected Service: ", newValue);
-    setService(newValue);
-  };
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [comment, setCommnet] = useState<string>("");
+  const { onSubmit } = useSendEmail(false as any);
 
   const handleContentClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -27,12 +26,20 @@ export const Popup: React.FC<IPopupProps> = ({ onClick }) => {
     <div className={styles.layout} onClick={onClick}>
       <div className={styles.popup} onClick={handleContentClick}>
         <span className={styles.popup__heading}>Contact Us</span>
-        <form className={styles.popup__form}>
+        <form
+          className={styles.popup__form}
+          onSubmit={(event) => {
+            event.preventDefault();
+            onSubmit(event);
+          }}
+        >
           <Input
             placeholder="Your Name"
             type="text"
             required
             name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             margin="mt-8 m-auto"
           />
           <Input
@@ -40,6 +47,7 @@ export const Popup: React.FC<IPopupProps> = ({ onClick }) => {
             type="phone"
             required
             name="phone"
+            onChange={(e) => setPhone(e.target.value)}
             margin="mt-8 m-auto"
           />
           <Input
@@ -47,6 +55,7 @@ export const Popup: React.FC<IPopupProps> = ({ onClick }) => {
             type="comment"
             required
             name="comment"
+            onChange={(e) => setCommnet(e.target.value)}
             margin="mt-8 m-auto"
           />
           <Button text="Send" buttonType="filled" margin="mt-8" type="submit" />
