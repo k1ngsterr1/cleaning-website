@@ -50,7 +50,7 @@
 
 @include respond-to("xxs") {
   .form_container_pc {
-    display: none;
+    display: none !important;
   }
 
   .form_container {
@@ -64,7 +64,7 @@
   }
 
   .form_container_pc {
-    display: none;
+    display: none !important;
   }
 }
 
