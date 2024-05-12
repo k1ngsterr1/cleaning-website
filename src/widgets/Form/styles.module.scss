@@ -74,7 +74,7 @@
   }
 
   .form_container_pc {
-    display: flex;
+    display: flex !important;
     @apply mt-32;
   }
 

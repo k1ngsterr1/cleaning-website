@@ -68,20 +68,20 @@
 
 @include respond-to("xl") {
   .swiper_button_prev {
-    left: clamp(385px, 56.618vw, 1360px);
+    left: clamp(175px, 25.735vw, 700px);
   }
 
   .swiper_button_next {
-    right: clamp(385px, 56.618vw, 1360px);
+    right: clamp(175px, 25.735vw, 700px);
+  }
+}
+
+@include respond-to("2xl") {
+  .swiper_button_prev {
+    left: clamp(325px, 33.852000000000004vw, 1300px);
   }
 
-  @include respond-to("2xl") {
-    .swiper_button_prev {
-      left: clamp(325px, 33.852000000000004vw, 1300px);
-    }
-
-    .swiper_button_next {
-      right: clamp(325px, 33.852000000000004vw, 1300px);
-    }
+  .swiper_button_next {
+    right: clamp(325px, 33.852000000000004vw, 1300px);
   }
 }
