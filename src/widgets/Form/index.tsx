@@ -1,18 +1,17 @@
 import { useState } from "react";
-import { options } from "@shared/lib/content/options";
+import { useSendEmail } from "@shared/lib/hooks/useSendEmail";
 import Input from "@shared/ui/Input";
 import Button from "@shared/ui/ReactButton";
-import Selector from "@shared/ui/Selector";
 import form_image from "@assets/images/form.webp";
 
 import styles from "./styles.module.scss";
 
 export const Form = () => {
-  const [service, setService] = useState("");
-
-  const handleServiceChange = (newValue: string) => {
-    setService(newValue);
-  };
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [comment, setCommnet] = useState<string>("");
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const { onSubmit } = useSendEmail(setPopupOpen);
 
   return (
     <>
@@ -26,27 +25,40 @@ export const Form = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna{" "}
         </p>
-        <form className="flex flex-col items-center">
+        <form
+          className="flex flex-col items-center"
+          onSubmit={(event) => {
+            event.preventDefault();
+            console.log("zhopa");
+            onSubmit(event);
+          }}
+        >
           <Input
             placeholder="Your Name"
             type="text"
+            value={name}
             required
             name="name"
             margin="mt-8"
+            onChange={(e) => setName(e.target.value)}
           />
           <Input
             placeholder="Your Phone"
             type="phone"
+            value={phone}
             required
             name="phone"
             margin="mt-8"
+            onChange={(e) => setPhone(e.target.value)}
           />
-          <Selector
-            placeholder="Choose Your Service"
-            value={service}
+          <Input
+            placeholder="Write a comment"
+            value={comment}
             margin="mt-8"
-            onChange={handleServiceChange}
-            options={options}
+            required
+            type="text"
+            name="comment"
+            onChange={(e) => setCommnet(e.target.value)}
           />
           <Button text="Send" buttonType="filled" margin="mt-8" type="submit" />
         </form>
@@ -72,27 +84,40 @@ export const Form = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna{" "}
           </p>
-          <form className="flex flex-col items-start">
+          <form
+            className="flex flex-col items-start"
+            onSubmit={(event) => {
+              event.preventDefault();
+              console.log("zhopa");
+              onSubmit(event);
+            }}
+          >
             <Input
               placeholder="Your Name"
               type="text"
+              value={name}
               required
               name="name"
               margin="mt-8"
+              onChange={(e) => setName(e.target.value)}
             />
             <Input
               placeholder="Your Phone"
               type="phone"
+              value={phone}
               required
               name="phone"
               margin="mt-8"
+              onChange={(e) => setPhone(e.target.value)}
             />
-            <Selector
-              placeholder="Choose Your Service"
-              value={service}
+            <Input
+              placeholder="Write a comment"
+              value={comment}
               margin="mt-8"
-              onChange={handleServiceChange}
-              options={options}
+              required
+              type="text"
+              name="comment"
+              onChange={(e) => setCommnet(e.target.value)}
             />
             <Button
               text="Send"
