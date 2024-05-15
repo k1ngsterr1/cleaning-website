@@ -1,12 +1,12 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import Policy from "@widgets/Policy/index.astro";
+import PolicyScreen from "@widgets/Policy/index.astro"
 import { Header } from "@features/Header";
 import { Footer } from "@features/Footer";
 ---
 
 <Layout title="Zaka Cleaining Privacy Policy">
   <Header client:load />
-  <Policy />
-  <Footer client:load />
+  <PolicyScreen />
+  <Footer client:idle />
 </Layout>

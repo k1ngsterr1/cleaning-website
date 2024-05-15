@@ -15,7 +15,6 @@ export const useMenuAnimation = (
 
         if (isOpen) {
           tl.to(menuRef.current, {
-            y: "2000%",
             autoAlpha: 1,
             scale: 1,
             duration: 1,
@@ -23,7 +22,6 @@ export const useMenuAnimation = (
           });
         } else {
           tl.to(menuRef.current, {
-            y: "-2000%",
             autoAlpha: 0,
             scale: 0.95,
             duration: 0.3,
