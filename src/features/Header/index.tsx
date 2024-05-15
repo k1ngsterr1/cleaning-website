@@ -1,5 +1,5 @@
 import { BurgerMenu } from "@features/BurgerMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useMenuAnimation } from "@shared/lib/hooks/useMenuAnimation";
 import { useBurgerButtonAnimation } from "@shared/lib/hooks/useBurgerButtonAnimation";
 import { Logo } from "@entities/Logo";
@@ -16,6 +16,14 @@ export const Header = () => {
   const handleOpenMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
