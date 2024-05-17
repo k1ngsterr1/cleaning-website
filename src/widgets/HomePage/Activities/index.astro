@@ -2,18 +2,20 @@
 import {ActivitySwiper} from "@features/ActivitySwiper/index"
 
 import styles from './styles.module.scss'
+import { ActivityCardList } from "@features/ActivityCardList"
 ---
 
 <section>
   <h3 class="mt-8 text-center w-[90%] m-auto">
     WHAT CAN YOU DO WHILE WE ARE CLEANING?
   </h3>
-  <p import { ActivityCardList } from "@features/ActivityCardList";
-class={`paragraph w-[80%] text-center mt-4 m-auto ${styles.paragraph}`}>
+  <p class={`paragraph w-[80%] text-center mt-4 m-auto ${styles.paragraph}`}>
     Relax, unwind, and enjoy your free time as we clean.
   </p>
-  <div class="flex flex-col items-center justify-center gap-8 mt-8">
-    <!-- <ActivityCardList client:load /> -->
+  <div class="hidden lg:flex flex-col items-center justify-center gap-8 mt-8">
     <ActivitySwiper client:idle/>
+  </div>
+  <div class="sm:flex flex-col items-center justify-center gap-8 mt-8 lg:hidden">
+    <ActivityCardList client:load/>
   </div>
 </section>
