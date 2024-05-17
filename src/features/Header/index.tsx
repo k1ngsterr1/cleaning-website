@@ -46,7 +46,7 @@ export const Header = () => {
               {link.label}
             </a>
           ))}
-          <a href="telto:7207099413" className={styles.header_pc__number}>
+          <a href="tel:7207099413" className={styles.header_pc__number}>
             (720) 709-9413
           </a>
         </nav>

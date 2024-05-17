@@ -8,16 +8,14 @@ import styles from './styles.module.scss'
 <section class="w-full  bg-main_blue mt-16 pt-8 pb-8">
   <h5 class="mt-8 text-white">REVIEWS</h5>
   <p class={`paragraph w-[80%] text-center mt-4 !text-white ${styles.paragraph}`}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris
+    Read what our satisfied customers have to say about us.
   </p>
-  <ReviewSwiper client:load />
+  <ReviewSwiper client:visible />
   <ReactButton
     buttonType="outline-yellow"
     text="About Us"
     margin="mt-4 mb-12 m-auto"
-    onClick={() => console.log("Button clicked")}
-    client:load
+    onClick={()=> window.location.href = '/about'}
+    client:idle
   />
 </section>

@@ -5,13 +5,13 @@ import styles from './styles.module.scss'
 ---
 <>
 <section class={`mt-8 ${styles.section_counter_mob}`}>
-    <Counter end={500} client:idle/>
-    <Counter end={500} margin='mt-4' client:idle/>
-    <Counter end={500} margin='mt-4' client:idle/>
+    <Counter end={500} client:load/>
+    <Counter end={500} margin='mt-4' client:load/>
+    <Counter end={500} margin='mt-4' client:load/>
 </section>
 <section class={`flex items-center  ${styles.section_counter_pc}`}>    
-    <Counter end={500} client:idle/>
-    <Counter end={500} margin='mt-4' client:idle/>
-    <Counter end={500} margin='mt-4' client:idle/>
+    <Counter end={500} client:load/>
+    <Counter end={500} margin='mt-4' client:load/>
+    <Counter end={500} margin='mt-4' client:load/>
 </section>
 </>

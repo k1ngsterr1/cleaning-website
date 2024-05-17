@@ -29,10 +29,9 @@ export const Form = () => {
           Contact <span className="text-main_blue">Us</span>
         </h5>
         <p
-          className={`paragraph mt-4 text-center w-[70%] m-auto ${styles.paragraph}`}
+          className={`paragraph mt-4 text-center w-[90%] m-auto ${styles.paragraph}`}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna{" "}
+          Get in touch with Zaka for all your cleaning needs.
         </p>
         <form
           className="flex flex-col items-center"
@@ -71,8 +70,8 @@ export const Form = () => {
           <Button text="Send" buttonType="filled" margin="mt-8" type="submit" />
         </form>
         <span className="flex flex-col items-center justify-center">
-          <a href="mailto:ruslanmakhmatov@gmail.com" className={styles.link}>
-            ruslanmakhmatov@gmail.com
+          <a href="mailto:cleaningzaka@gmail.com" className={styles.link}>
+            cleaningzaka@gmail.com{" "}
           </a>
           <a href="tel:7207099413" className={styles.link}>
             (720) 709-9413
@@ -89,9 +88,8 @@ export const Form = () => {
           <h5 className={`text-center text-dark_blue`}>
             Contact <span className="text-main_blue">Us</span>
           </h5>
-          <p className={`paragraph mt-4 text-left !w-[40%]`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna{" "}
+          <p className={`paragraph mt-4 text-left !w-[60%]`}>
+            Get in touch with Zaka for all your cleaning needs.
           </p>
           <form
             className="flex flex-col items-start"

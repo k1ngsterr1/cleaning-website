@@ -3,6 +3,7 @@ import { ServiceCardList } from "@features/ServiceCardsList";
 import Button from "@shared/ui/Button/index.astro";
 
 import styles from "./styles.module.scss";
+import { ReactLink } from "@shared/ui/ReactLink";
 ---
 
 <main
@@ -13,12 +14,10 @@ import styles from "./styles.module.scss";
     <span class="text-dark_blue">OUR</span> SERVICES
   </h4>
   <p class={`paragraph w-[80%] text-center mt-4 m-auto ${styles.paragraph}`}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris
+    Explore Zaka's range of professional cleaning solutions.
   </p>
   <div class="flex flex-col items-center justify-center gap-8 mt-8">
-    <ServiceCardList client:load />
+    <ServiceCardList client:idle />
   </div>
-  <Button text="Book A Cleaning" buttonType="filled" margin="mt-8" />
+  <ReactLink text="Book A Cleaning" to="form-pc" buttonType="filled" margin="mt-8" client:visible />
 </main>

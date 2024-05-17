@@ -1,4 +1,3 @@
-// Add to the snippets & observer
 import React from "react";
 import CountUp from "react-countup";
 
@@ -13,8 +12,8 @@ export const Counter: React.FC<ICountUpProps> = ({ end, margin }) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <CountUp end={end} className={`${styles.counter} ${margin}`} />
-        <p className="paragraph !text-center">Lorem Ipsum</p>
+        {/* <CountUp end={end} className={`${styles.counter} ${margin}`} />
+        <p className="paragraph !text-center">Lorem Ipsum</p> */}
       </div>
     </>
   );
