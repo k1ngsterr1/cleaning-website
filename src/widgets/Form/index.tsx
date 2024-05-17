@@ -73,8 +73,8 @@ export const Form = () => {
           <a href="mailto:cleaningzaka@gmail.com" className={styles.link}>
             cleaningzaka@gmail.com{" "}
           </a>
-          <a href="tel:7207099413" className={styles.link}>
-            (720) 709-9413
+          <a href="tel:+17088554746" className={styles.link}>
+            +1-708-855-47-46
           </a>
         </span>
         <img src={form_image.src} className={styles.image} alt="Form Images" />
@@ -131,6 +131,25 @@ export const Form = () => {
               margin="mt-8"
               type="submit"
             />
+            <a
+              href="mailto:cleaningzaka@gmail.com"
+              className={`${styles.link} transition-all  hover:text-dark_blue`}
+            >
+              cleaningzaka@gmail.com{" "}
+            </a>
+            <a
+              href="tel:+17088554746"
+              className={`${styles.link} transition-all !mt-2 hover:text-dark_blue`}
+            >
+              +1-708-855-47-46
+            </a>
+            <a
+              href="https://maps.app.goo.gl/jMpRWSg2zSud1mbs9?g_st=ic"
+              target="_blank"
+              className={`${styles.link} transition-all !mt-2 hover:text-dark_blue`}
+            >
+              6437 N Hamilton Ave
+            </a>
           </form>
         </div>
         <img src={form_image.src} className={styles.image} alt="Form Images" />

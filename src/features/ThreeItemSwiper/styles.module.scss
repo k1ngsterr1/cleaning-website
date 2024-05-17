@@ -1,0 +1,23 @@
+.swiperContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiperWrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: calc((100% / 3));
+  overflow: hidden;
+}
+
+.swiperSlide:last-child {
+  margin-right: 0;
+}
