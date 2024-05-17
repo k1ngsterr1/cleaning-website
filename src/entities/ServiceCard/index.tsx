@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 interface IServiceCardProps {
   icon: IconDefinition;
   heading: string;
-  price: string;
+  price?: string;
   paragraph: string;
   onClick: () => void;
 }
@@ -21,7 +21,7 @@ export const ServiceCard: React.FC<IServiceCardProps> = ({
   onClick,
 }) => {
   return (
-    <div className={styles.service_card}>
+    <div className={styles.service_card} onClick={onClick}>
       <FontAwesomeIcon icon={icon} className={styles.service_card__icon} />
       <span className={styles.service_card__heading}>{heading}</span>
       <span className={styles.service_card__price}>{price}</span>

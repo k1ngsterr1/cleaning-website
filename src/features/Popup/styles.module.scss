@@ -37,6 +37,11 @@
     @apply mt-8;
   }
 
+  @include respond-to("lg") {
+    width: clamp(175px, 29.167vw, 700px);
+    min-height: clamp(125px, 20.833vw, 500px);
+  }
+
   @include respond-to("xl") {
     width: clamp(225px, 33.088vw, 900px);
     height: clamp(150px, 22.059vw, 600px);
