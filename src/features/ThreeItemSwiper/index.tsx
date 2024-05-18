@@ -16,13 +16,17 @@ SwiperCore.use([Navigation]);
 
 interface IThreeItemSwiper {
   children: React.ReactNode;
+  slidesPerView: number;
 }
 
-export const ThreeItemSwiper: React.FC<IThreeItemSwiper> = ({ children }) => {
+export const ThreeItemSwiper: React.FC<IThreeItemSwiper> = ({
+  children,
+  slidesPerView,
+}) => {
   return (
     <div className={styles.swiper_container}>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
         spaceBetween={0}
         navigation={{
           nextEl: ".swiper-button-next",

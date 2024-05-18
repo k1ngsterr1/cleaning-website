@@ -4,7 +4,7 @@ import { activitiesContent } from "@shared/lib/content/activitiesContent";
 
 export const ActivitySwiper = () => {
   return (
-    <ThreeItemSwiper>
+    <ThreeItemSwiper slidesPerView={4}>
       {activitiesContent.map((card, index) => (
         <ActivityCard key={index} icon={card.icon} activity={card.activity} />
       ))}
