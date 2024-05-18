@@ -1,8 +1,8 @@
 ---
-import {ActivitySwiper} from "@features/ActivitySwiper/index"
+import { ActivitySwiper } from "@features/ActivitySwiper/index";
 
-import styles from './styles.module.scss'
-import { ActivityCardList } from "@features/ActivityCardList"
+import styles from "./styles.module.scss";
+import { ActivityCardList } from "@features/ActivityCardList";
 ---
 
 <section>
@@ -13,9 +13,11 @@ import { ActivityCardList } from "@features/ActivityCardList"
     Relax, unwind, and enjoy your free time as we clean.
   </p>
   <div class="hidden lg:flex flex-col items-center justify-center gap-8 mt-8">
-    <ActivitySwiper client:idle/>
+    <ActivitySwiper client:visible />
   </div>
-  <div class="sm:flex flex-col items-center justify-center gap-8 mt-8 lg:hidden">
-    <ActivityCardList client:load/>
+  <div
+    class="sm:flex flex-col items-center justify-center gap-8 mt-8 lg:hidden"
+  >
+    <ActivityCardList client:load />
   </div>
 </section>
