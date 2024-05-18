@@ -21,8 +21,8 @@ export const Footer = () => {
             </a>
           ))}
         </nav>
-        <a className={styles.footer__link} href="tel:7207099413">
-          (720) 709-9413
+        <a className={styles.footer__link} href="tel:+17088554746">
+          +1-708-855-47-46
         </a>
         <ReactLink
           text="Go Up"

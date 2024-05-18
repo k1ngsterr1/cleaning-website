@@ -19,5 +19,13 @@ import { ReactLink } from "@shared/ui/ReactLink";
   <div class="flex flex-col items-center justify-center gap-8 mt-8">
     <ServiceCardList client:idle />
   </div>
-  <ReactLink text="Book A Cleaning" to="form-pc" buttonType="filled" margin="mt-8" client:visible />
+  <div class="max-[1200px]:hidden">
+    <ReactLink
+      text="Book A Cleaning"
+      to="form-pc"
+      buttonType="filled"
+      margin="mt-8"
+      client:visible
+    />
+  </div>
 </main>
