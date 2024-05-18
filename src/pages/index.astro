@@ -13,7 +13,10 @@ import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
 ---
 
-<Layout title=" Professional Cleaning Services in Chicago | Zaka" description="Discover top-notch cleaning services in Chicago with Zaka. Expert cleaners for homes and offices. Contact us today for a sparkling space!">
+<Layout
+  title=" Professional Cleaning Services in Chicago | Zaka"
+  description="Discover top-notch cleaning services in Chicago with Zaka. Expert cleaners for homes and offices. Contact us today for a sparkling space!"
+>
   <Main
     title="Cleaning services in Chicago: Zaka brings shine to homes"
     paragraph="Discover top-notch cleaning services in Chicago with Zaka. Expert cleaners for homes and offices. Contact us today for a sparkling space!"
@@ -21,7 +24,7 @@ import { Form } from "@widgets/Form/index";
   />
   <About />
   <Features />
-  <Activities />
+  <Activities client:load />
   <Services />
   <Reviews />
   <Book />

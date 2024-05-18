@@ -14,6 +14,11 @@ body {
   @apply font-gothamProReg;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none; /* Hides default Swiper arrows */
+}
+
 .smaller {
   display: flex;
   @include respond-to("xxs") {

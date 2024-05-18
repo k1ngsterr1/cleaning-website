@@ -60,3 +60,19 @@
     }
   }
 }
+
+@include respond-to("xl") {
+  .activity_card {
+    width: clamp(100px, 14.706vw, 400px) !important;
+    height: clamp(70px, 10.294vw, 280px) !important;
+    min-height: auto;
+  }
+}
+
+@include respond-to("2xl") {
+  .activity_card {
+    width: clamp(100px, 13.158vw, 400px) !important;
+    height: clamp(70px, 9.211vw, 280px) !important;
+    min-height: auto;
+  }
+}

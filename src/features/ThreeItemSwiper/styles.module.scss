@@ -1,21 +1,19 @@
-.swiperContainer {
+.swiper_container {
   position: relative;
-  width: 100%;
+  width: 70%;
   overflow: hidden;
 }
 
-.swiperWrapper {
+.swiper_wrapper {
+  width: 50%;
   display: flex;
   transition: transform 0.3s ease-in-out;
 }
 
-.swiperSlide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: calc((100% / 3));
-  overflow: hidden;
+.swiper_slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .swiperSlide:last-child {
