@@ -17,6 +17,7 @@ export const useMenuAnimation = (
           tl.to(menuRef.current, {
             autoAlpha: 1,
             scale: 1,
+            zIndex: 1000,
             duration: 1,
             ease: "power3.out",
           });
@@ -24,6 +25,7 @@ export const useMenuAnimation = (
           tl.to(menuRef.current, {
             autoAlpha: 0,
             scale: 0.95,
+            zIndex: -100,
             duration: 0.3,
             ease: "power3.in",
             clearProps: "all",

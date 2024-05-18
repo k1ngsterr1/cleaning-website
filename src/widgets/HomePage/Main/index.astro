@@ -16,7 +16,7 @@ const { title, paragraph, image } = Astro.props;
 
 <>
   <main class="smaller flex flex-col items-center justify-center" id="main">
-    <Header client:load  />
+    <Header client:load />
     <h1 class="text-center mt-16">
       {title}
     </h1>
@@ -30,7 +30,7 @@ const { title, paragraph, image } = Astro.props;
       to="form"
       client:load
     />
-    <Button buttonType="text" text="Explore More" margin="mt-2" />
+    <!-- <Button buttonType="text" text="Explore More" margin="mt-2" /> -->
     <img class={styles.image} src={image.src} alt="Cleaning Image" />
   </main>
   <main class={`bigger content flex flex-col ${styles.main_pc}`} id="main-pc">
