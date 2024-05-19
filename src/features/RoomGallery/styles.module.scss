@@ -1,0 +1,34 @@
+@import "breakpoint-slicer";
+@import "../../shared/styles/mixins.scss";
+@import "../../shared/styles/variables.scss";
+
+@include respond-to("lg") {
+  .room_gallery {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    &__image {
+      @include respond-to("lg") {
+        width: clamp(150px, 25vw, 600px);
+        height: clamp(125px, 20.833vw, 500px);
+      }
+    }
+  }
+
+  .room_gallery_mob {
+    display: none !important;
+  }
+}
+
+@include respond-to("xxs") {
+  .room_gallery {
+    display: none;
+  }
+
+  .room_gallery_mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

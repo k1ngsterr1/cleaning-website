@@ -11,6 +11,7 @@ import About from "@widgets/AboutPage/About/index.astro";
 
 import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
+import { RoomGallery } from "@features/RoomGallery";
 ---
 
 <Layout
@@ -28,6 +29,7 @@ import { Form } from "@widgets/Form/index";
   <Services />
   <Reviews />
   <Book />
+  <RoomGallery client:idle/>
   <Form client:load />
   <Footer client:idle />
 </Layout>
