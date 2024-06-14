@@ -15,4 +15,34 @@
   @include respond-to("md") {
     @apply text-2xl;
   }
+
+  &__icon {
+    width: clamp(16px, 32 / 992 * 100vw, 64px);
+    height: clamp(16px, 32 / 992 * 100vw, 64px);
+
+    @include respond-to("lg") {
+      width: clamp(16px, 32 / 1200 * 100vw, 64px);
+      height: clamp(16px, 32 / 1200 * 100vw, 64px);
+    }
+
+    @include respond-to("xl") {
+      width: clamp(16px, 32 / 1360 * 100vw, 64px);
+      height: clamp(16px, 32 / 1360 * 100vw, 64px);
+    }
+
+    @include respond-to("2xl") {
+      width: clamp(16px, 32 / 1520 * 100vw, 64px);
+      height: clamp(16px, 32 / 1520 * 100vw, 64px);
+    }
+
+    @include respond-to("3xl") {
+      width: clamp(16px, 32 / 1680 * 100vw, 64px);
+      height: clamp(16px, 32 / 1680 * 100vw, 64px);
+    }
+
+    @include respond-to("4xl") {
+      width: clamp(16px, 32 / 1920 * 100vw, 64px);
+      height: clamp(16px, 32 / 1920 * 100vw, 64px);
+    }
+  }
 }

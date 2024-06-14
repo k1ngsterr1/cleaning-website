@@ -9,8 +9,9 @@ import Activities from "@widgets/HomePage/Activities/index.astro";
 import cleaning_image from "@assets/images/main.webp";
 import About from "@widgets/AboutPage/About/index.astro";
 
-import { Footer } from "@features/Footer";
 import { Form } from "@widgets/Form/index";
+import {FormSecond} from "@widgets/FormSecond/index"
+import { Footer } from "@features/Footer";
 import { RoomGallery } from "@features/RoomGallery";
 ---
 
@@ -24,6 +25,7 @@ import { RoomGallery } from "@features/RoomGallery";
     image={cleaning_image}
   />
   <About />
+  <FormSecond/>
   <Features />
   <Activities />
   <Services />
