@@ -8,10 +8,10 @@
 
   @include respond-to("md") {
     width: clamp(450px, 46.872vw, 1800px);
-    position: absolute;
+    // position: absolute;
     height: clamp(324.5px, 33.79992vw, 1298px);
-    top: clamp(64px, 6.66624vw, 256px);
-    right: 0;
+    // top: clamp(64px, 6.66624vw, 256px);
+    // right: 0;
   }
 
   @include respond-to("lg") {
@@ -31,7 +31,8 @@
   }
 
   @include respond-to("4xl") {
-    width: clamp(300px, 600 / 1920 * 100vw, 1200px);
+    width: clamp(700px, 1400 / 1920 * 100vw, 2800px);
+    height: clamp(500px, 1000 / 1920 * 100vw, 2000px);
   }
 
   @include respond-to("5xl") {
@@ -48,13 +49,17 @@
 @include respond-to("lg") {
   .main_pc {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .heading {
+    text-align: center;
     width: 50%;
   }
 
   .paragraph {
+    text-align: center;
     width: 40% !important;
   }
 }

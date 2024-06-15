@@ -35,10 +35,10 @@ const { title, paragraph, image } = Astro.props;
   </main>
   <main class={`bigger content flex flex-col ${styles.main_pc}`} id="main-pc">
     <Header client:load />
-    <div class="w-full flex flex-col items-start mt-16">
+    <div class="w-full flex flex-col items-center mt-16">
       <h1 class={styles.heading}>{title}</h1>
       <p class={`paragraph mt-4 ${styles.paragraph}`}>{paragraph}</p>
-      <div class="flex items-center gap-0">
+      <div class="flex items-center justify-center w-full gap-0">
         <ReactLink
           buttonType="filled"
           text="Contact Us"
@@ -47,7 +47,7 @@ const { title, paragraph, image } = Astro.props;
           client:load
         />
       </div>
+      <img class={styles.image} src={image.src} alt="Cleaning Image" />
     </div>
-    <img class={styles.image} src={image.src} alt="Cleaning Image" />
   </main>
 </>

@@ -21,7 +21,7 @@ export const FormSecond = () => {
   return (
     <>
       <div
-        className={`${styles.form_container} !flex !flex-col items-center`}
+        className={`${styles.form_container} !flex !flex-col items-center `}
         id="form-mob"
       >
         {isPopupOpen && <SuccessPopup onClick={handleClosePopup} />}
